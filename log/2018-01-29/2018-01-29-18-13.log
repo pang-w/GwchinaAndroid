@@ -1,0 +1,5 @@
+2018-01-29 18:13:51,290 - screenAssert - INFO - Test case ID: test_home_A001 
+2018-01-29 18:14:04,111 - CreatePNG - INFO - 截取页面自定义大小 test_home_A001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 18:14:04,156 - screenAssert - ERROR - Test case ID: test_home_A001 
+2018-01-29 18:14:08,344 - screenAssert - ERROR - Test case assertion failureGet, error info ( PFBJTC5QbmdJbWFnZVBsdWdpbi5QbmdJbWFnZUZpbGUgaW1hZ2UgbW9kZT1SR0JBIHNpemU9MTA3OHgxMDgxIGF0IDB4MUYwREY3RTI5MDg+|PFBJTC5QbmdJbWFnZVBsdWdpbi5QbmdJbWFnZUZpbGUgaW1hZ2UgbW9kZT1SR0JBIHNpemU9MTA3OHgxMDgxIGF0IDB4MUYwREY4NkY2MzA+| )
+2018-01-29 18:14:08,344 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'

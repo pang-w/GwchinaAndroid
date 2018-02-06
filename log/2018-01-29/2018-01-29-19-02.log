@@ -1,0 +1,446 @@
+2018-01-29 19:02:19,892 - APIDataInfo - INFO - My_api -> get_token -> 获取token值 BNP7SuGNK0uwLlCOrVrUvA== 
+2018-01-29 19:02:33,590 - screenAssert - INFO - Test case ID: test_home_A001 
+2018-01-29 19:02:47,813 - CreatePNG - INFO - 截取页面自定义大小 test_home_A001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:03:01,575 - screenAssert - INFO - Test case ID: test_home_A002 
+2018-01-29 19:03:33,861 - screenAssert - INFO - Test case ID: test_home_A003 
+2018-01-29 19:04:12,851 - screenAssert - INFO - Test case ID: test_home_A004 
+2018-01-29 19:04:43,980 - screenAssert - INFO - Test case ID: test_home_A005 
+2018-01-29 19:05:02,808 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 0} 
+2018-01-29 19:05:09,521 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 0} 
+2018-01-29 19:05:09,521 - screenAssert - ERROR - Test case ID: test_home_A005 
+2018-01-29 19:05:12,807 - screenAssert - ERROR - Test case assertion failureGet, error info ( 0 != 1 )
+2018-01-29 19:05:12,807 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:05:26,373 - screenAssert - INFO - Test case ID: test_home_A006 
+2018-01-29 19:06:05,536 - screenAssert - INFO - Test case ID: test_home_A007 
+2018-01-29 19:06:18,545 - URL_Management - CRITICAL - --------------------网址管理测试开始--------------------
+2018-01-29 19:06:30,956 - screenAssert - INFO - Test case ID: test_url_A001_level 
+2018-01-29 19:06:53,776 - url_page - INFO - A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 1 次重试
+2018-01-29 19:07:29,854 - Common - INFO - 'visibility_of_element_located' <PO.po_page.A2_url_man_page.url_page object at 0x00000293B94E5898> 页面中未能找到 ('id', 'com.gwchina.lssw.parent:id/btn_negative') 元素,以截图保存至report
+2018-01-29 19:07:29,854 - screenAssert - ERROR - Test case ID: test_url_A001_level 
+2018-01-29 19:07:33,566 - screenAssert - ERROR - Test case assertion failureGet, error info ( 'NoneType' object has no attribute 'click' )
+2018-01-29 19:07:33,567 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:07:47,183 - screenAssert - INFO - Test case ID: test_url_A002_level 
+2018-01-29 19:07:55,439 - screenAssert - ERROR - Test case ID: test_url_A002_level 
+2018-01-29 19:07:58,959 - screenAssert - ERROR - Test case assertion failureGet, error info ( Message: android.support.test.uiautomator.StaleObjectException
+	at android.support.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:629)
+	at android.support.test.uiautomator.UiObject2.getVisibleBounds(UiObject2.java:210)
+	at android.support.test.uiautomator.UiObject2.getVisibleCenter(UiObject2.java:251)
+	at android.support.test.uiautomator.UiObject2.click(UiObject2.java:343)
+	at io.appium.uiautomator2.model.UiObject2Element.click(UiObject2Element.java:44)
+	at io.appium.uiautomator2.handler.Click.safeHandle(Click.java:40)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:202)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:193)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:818)
+
+ )
+2018-01-29 19:07:58,960 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:08:12,715 - screenAssert - INFO - Test case ID: test_url_A003_level 
+2018-01-29 19:08:39,671 - screenAssert - INFO - Test case ID: test_url_A004_level 
+2018-01-29 19:09:07,219 - screenAssert - INFO - Test case ID: test_url_A005_level 
+2018-01-29 19:09:23,160 - CreatePNG - INFO - 截取页面自定义大小 test_url_A005_level.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:09:36,816 - screenAssert - INFO - Test case ID: test_url_A006_level 
+2018-01-29 19:10:06,142 - screenAssert - INFO - Test case ID: test_url_A007_level 
+2018-01-29 19:10:22,982 - CreatePNG - INFO - 截取页面自定义大小 test_url_A007_level.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:10:36,536 - screenAssert - INFO - Test case ID: test_url_A008_level 
+2018-01-29 19:11:04,047 - screenAssert - INFO - Test case ID: test_url_A009_level 
+2018-01-29 19:11:20,018 - CreatePNG - INFO - 截取页面自定义大小 test_url_A009_level.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:11:33,415 - screenAssert - INFO - Test case ID: test_url_A010_level 
+2018-01-29 19:12:02,963 - screenAssert - INFO - Test case ID: test_url_A011_level 
+2018-01-29 19:12:19,089 - SQLDataInfo - INFO - 从SQL获取网址管理等级 [{'url_limit_id': 1}] 
+2018-01-29 19:12:32,797 - screenAssert - INFO - Test case ID: test_url_A012_level 
+2018-01-29 19:12:50,317 - SQLDataInfo - INFO - 从SQL获取网址管理等级 [{'url_limit_id': 2}] 
+2018-01-29 19:13:03,929 - screenAssert - INFO - Test case ID: test_url_A013_level 
+2018-01-29 19:13:20,783 - SQLDataInfo - INFO - 从SQL获取网址管理等级 [{'url_limit_id': 3}] 
+2018-01-29 19:13:34,191 - screenAssert - INFO - Test case ID: test_url_B001_black 
+2018-01-29 19:13:50,871 - CreatePNG - INFO - 截取页面自定义大小 test_url_B001_black.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:14:04,527 - screenAssert - INFO - Test case ID: test_url_B002_black 
+2018-01-29 19:14:32,686 - screenAssert - INFO - Test case ID: test_url_B003_black 
+2018-01-29 19:15:01,662 - screenAssert - INFO - Test case ID: test_url_B004_black 
+2018-01-29 19:15:31,683 - screenAssert - INFO - Test case ID: test_url_B005_black 
+2018-01-29 19:16:05,898 - screenAssert - INFO - Test case ID: test_url_B006_black 
+2018-01-29 19:16:43,192 - screenAssert - INFO - Test case ID: test_url_B007_black 
+2018-01-29 19:17:21,604 - screenAssert - INFO - Test case ID: test_url_B008_black 
+2018-01-29 19:18:03,305 - screenAssert - INFO - Test case ID: test_url_B009_black 
+2018-01-29 19:18:44,610 - screenAssert - INFO - Test case ID: test_url_B010_black 
+2018-01-29 19:19:28,554 - screenAssert - INFO - Test case ID: test_url_B011_black 
+2018-01-29 19:20:14,845 - screenAssert - INFO - Test case ID: test_url_B012_black 
+2018-01-29 19:21:02,169 - screenAssert - INFO - Test case ID: test_url_B013_black 
+2018-01-29 19:21:41,873 - screenAssert - INFO - Test case ID: test_url_B014_black 
+2018-01-29 19:22:20,056 - screenAssert - INFO - Test case ID: test_url_B015_black 
+2018-01-29 19:23:08,246 - screenAssert - INFO - Test case ID: test_url_B016_black 
+2018-01-29 19:23:52,366 - screenAssert - INFO - Test case ID: test_url_B017_black 
+2018-01-29 19:24:33,439 - screenAssert - INFO - Test case ID: test_url_B018_black 
+2018-01-29 19:25:12,426 - screenAssert - INFO - Test case ID: test_url_B019_black 
+2018-01-29 19:25:42,189 - SQLDataInfo - INFO - 从SQL获取网址黑名单网址list为  [{'url_domain': 'baidu.com'}, {'url_domain': 'qq.com'}, {'url_domain': 'sohu.com'}] 
+2018-01-29 19:26:01,675 - screenAssert - INFO - Test case ID: test_url_C001_white 
+2018-01-29 19:26:17,779 - CreatePNG - INFO - 截取页面自定义大小 test_url_C001_white.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:26:31,485 - screenAssert - INFO - Test case ID: test_url_C002_white 
+2018-01-29 19:26:59,127 - screenAssert - INFO - Test case ID: test_url_C003_white 
+2018-01-29 19:27:29,121 - screenAssert - INFO - Test case ID: test_url_C004_white 
+2018-01-29 19:27:59,587 - screenAssert - INFO - Test case ID: test_url_C005_white 
+2018-01-29 19:28:32,881 - screenAssert - INFO - Test case ID: test_url_C006_white 
+2018-01-29 19:29:09,206 - screenAssert - INFO - Test case ID: test_url_C007_white 
+2018-01-29 19:29:47,518 - screenAssert - INFO - Test case ID: test_url_C008_white 
+2018-01-29 19:30:29,175 - screenAssert - INFO - Test case ID: test_url_C009_white 
+2018-01-29 19:31:11,045 - screenAssert - INFO - Test case ID: test_url_C010_white 
+2018-01-29 19:31:54,670 - screenAssert - INFO - Test case ID: test_url_C011_white 
+2018-01-29 19:32:40,823 - screenAssert - INFO - Test case ID: test_url_C012_white 
+2018-01-29 19:33:28,976 - screenAssert - INFO - Test case ID: test_url_C013_white 
+2018-01-29 19:34:09,240 - screenAssert - INFO - Test case ID: test_url_C014_white 
+2018-01-29 19:34:46,639 - screenAssert - INFO - Test case ID: test_url_C015_white 
+2018-01-29 19:35:35,936 - screenAssert - INFO - Test case ID: test_url_C016_white 
+2018-01-29 19:36:17,576 - screenAssert - INFO - Test case ID: test_url_C017_white 
+2018-01-29 19:36:58,743 - screenAssert - INFO - Test case ID: test_url_C018_white 
+2018-01-29 19:37:36,114 - screenAssert - INFO - Test case ID: test_url_C019_white 
+2018-01-29 19:38:04,208 - SQLDataInfo - INFO - 从SQL获取网址白名单网址list为  [{'url_domain': '51.com'}, {'url_domain': '51job.com'}, {'url_domain': 'taobao.com'}] 
+2018-01-29 19:38:23,548 - screenAssert - INFO - Test case ID: test_url_D001_white_and_black 
+2018-01-29 19:39:00,743 - screenAssert - INFO - Test case ID: test_url_D012_white_and_black 
+2018-01-29 19:39:37,798 - screenAssert - INFO - Test case ID: test_url_E001_key 
+2018-01-29 19:39:55,151 - CreatePNG - INFO - 截取页面自定义大小 test_url_E001_key.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:40:08,638 - screenAssert - INFO - Test case ID: test_url_E002_key 
+2018-01-29 19:40:26,771 - CreatePNG - INFO - 截取页面自定义大小 test_url_E002_key.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:40:40,170 - screenAssert - INFO - Test case ID: test_url_E003_key 
+2018-01-29 19:41:00,962 - CreatePNG - INFO - 截取页面自定义大小 test_url_E003_key.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:41:14,575 - screenAssert - INFO - Test case ID: test_url_E004_key 
+2018-01-29 19:41:37,117 - CreatePNG - INFO - 截取页面自定义大小 test_url_E004_key.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:41:50,881 - screenAssert - INFO - Test case ID: test_url_E005_key 
+2018-01-29 19:42:23,569 - screenAssert - INFO - Test case ID: test_url_E006_key 
+2018-01-29 19:42:52,997 - screenAssert - INFO - Test case ID: test_url_E007_key 
+2018-01-29 19:43:17,364 - CreatePNG - INFO - 截取页面自定义大小 test_url_E007_key.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:43:31,073 - screenAssert - INFO - Test case ID: test_url_E008_key 
+2018-01-29 19:44:15,207 - screenAssert - INFO - Test case ID: test_url_E009_key 
+2018-01-29 19:44:53,009 - screenAssert - INFO - Test case ID: test_url_E010_key 
+2018-01-29 19:45:35,098 - screenAssert - INFO - Test case ID: test_url_E011_key 
+2018-01-29 19:46:05,111 - screenAssert - INFO - Test case ID: test_url_E012_key 
+2018-01-29 19:46:51,532 - screenAssert - INFO - Test case ID: test_url_E013_key 
+2018-01-29 19:47:39,365 - screenAssert - INFO - Test case ID: test_url_E014_key 
+2018-01-29 19:48:18,805 - screenAssert - INFO - Test case ID: test_url_E015_key 
+2018-01-29 19:48:47,764 - URL_Management - CRITICAL - --------------------网址管理测试结束--------------------
+2018-01-29 19:48:47,765 - TimeTest - CRITICAL - --------------------时间管理测试开始--------------------
+2018-01-29 19:49:00,155 - screenAssert - INFO - Test case ID: test_time_A001 
+2018-01-29 19:49:15,694 - CreatePNG - INFO - 截取页面自定义大小 test_time_001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:49:31,331 - screenAssert - INFO - Test case ID: test_time_A002 
+2018-01-29 19:49:47,531 - CreatePNG - INFO - 截取页面自定义大小 test_time_002.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:50:07,519 - screenAssert - INFO - Test case ID: test_time_A003 
+2018-01-29 19:50:38,607 - screenAssert - INFO - Test case ID: test_time_A004 
+2018-01-29 19:51:12,418 - screenAssert - INFO - Test case ID: test_time_A005 
+2018-01-29 19:51:41,713 - screenAssert - INFO - Test case ID: test_time_A006 
+2018-01-29 19:51:58,640 - CreatePNG - INFO - 截取页面自定义大小 test_time_006.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:52:13,941 - screenAssert - INFO - Test case ID: test_time_A007 
+2018-01-29 19:53:00,544 - screenAssert - INFO - Test case ID: test_time_A008 
+2018-01-29 19:53:19,627 - screenAssert - ERROR - Test case ID: test_time_A008 
+2018-01-29 19:53:22,441 - screenAssert - ERROR - Test case assertion failureGet, error info ( '05:00-24:00' != '06:00-24:00'
+- 05:00-24:00
+?  ^
++ 06:00-24:00
+?  ^
+ )
+2018-01-29 19:53:22,441 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:53:38,038 - screenAssert - INFO - Test case ID: test_time_A009 
+2018-01-29 19:53:56,731 - screenAssert - ERROR - Test case ID: test_time_A009 
+2018-01-29 19:53:59,552 - screenAssert - ERROR - Test case assertion failureGet, error info ( '05:00-06:00,    19:00-24:00' != '19:00-24:00'
+- 05:00-06:00,    19:00-24:00
++ 19:00-24:00
+ )
+2018-01-29 19:53:59,553 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:54:15,464 - screenAssert - INFO - Test case ID: test_time_A011 
+2018-01-29 19:54:34,014 - screenAssert - ERROR - Test case ID: test_time_A011 
+2018-01-29 19:54:36,850 - screenAssert - ERROR - Test case assertion failureGet, error info ( '05:00-06:00' != '全天禁用'
+- 05:00-06:00
++ 全天禁用
+ )
+2018-01-29 19:54:36,850 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:54:52,662 - screenAssert - INFO - Test case ID: test_time_A012 
+2018-01-29 19:55:13,226 - screenAssert - ERROR - Test case ID: test_time_A012 
+2018-01-29 19:55:16,057 - screenAssert - ERROR - Test case assertion failureGet, error info ( '01:00-06:00' != '01:00-05:00'
+- 01:00-06:00
+?        ^
++ 01:00-05:00
+?        ^
+ )
+2018-01-29 19:55:16,058 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:55:31,710 - screenAssert - INFO - Test case ID: test_time_A013 
+2018-01-29 19:55:50,367 - screenAssert - ERROR - Test case ID: test_time_A013 
+2018-01-29 19:55:53,218 - screenAssert - ERROR - Test case assertion failureGet, error info ( '01:00-06:00,    07:00-14:00' != '01:00-05:00,    07:00-14:00'
+- 01:00-06:00,    07:00-14:00
+?        ^
++ 01:00-05:00,    07:00-14:00
+?        ^
+ )
+2018-01-29 19:55:53,218 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:56:09,025 - screenAssert - INFO - Test case ID: test_time_A014 
+2018-01-29 19:56:29,255 - screenAssert - ERROR - Test case ID: test_time_A014 
+2018-01-29 19:56:32,083 - screenAssert - ERROR - Test case assertion failureGet, error info ( '01:00-06:00,    07:00-14:00,    18:00-23:00' != '01:00-05:00,    07:00-14:00,    18:00-24:00'
+- 01:00-06:00,    07:00-14:00,    18:00-23:00
+?        ^                               ^
++ 01:00-05:00,    07:00-14:00,    18:00-24:00
+?        ^                               ^
+ )
+2018-01-29 19:56:32,083 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 19:56:35,032 - TimeTest - CRITICAL - --------------------时间管理测试结束--------------------
+2018-01-29 19:56:35,032 - AreaTest - CRITICAL - --------------------安全区域测试开始--------------------
+2018-01-29 19:56:47,597 - screenAssert - INFO - Test case ID: test_area_001 
+2018-01-29 19:57:12,870 - screenAssert - INFO - Test case ID: test_area_002 
+2018-01-29 19:57:41,820 - screenAssert - INFO - Test case ID: test_area_003 
+2018-01-29 19:57:55,973 - CreatePNG - INFO - 截取页面自定义大小 test_area_003.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 19:58:09,652 - screenAssert - INFO - Test case ID: test_area_004 
+2018-01-29 19:58:37,131 - screenAssert - INFO - Test case ID: test_area_005 
+2018-01-29 19:59:05,202 - screenAssert - INFO - Test case ID: test_area_006 
+2018-01-29 19:59:34,228 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 19:59:34,760 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 19:59:34,826 - APIDataInfo - INFO - My_api -> get_bind_id -> 默认账号18521524172 绑定的默认设备天机MINI03 bind_id 为 1097963 
+2018-01-29 19:59:34,886 - APIDataInfo - INFO - My_api -> get_area -> 默认账号18521524172 绑定的默认设备天机MINI03 -> 仅获取 list[0]
+2018-01-29 19:59:34,887 - APIDataInfo - INFO - My_api -> get_area -> 获取安全区域地址为 上海市徐汇区虹梅路街道金陵商务广场 
+2018-01-29 19:59:48,320 - screenAssert - INFO - Test case ID: test_area_007 
+2018-01-29 20:00:16,843 - screenAssert - INFO - Test case ID: test_area_008 
+2018-01-29 20:00:51,379 - screenAssert - INFO - Test case ID: test_area_009 
+2018-01-29 20:01:10,722 - CreatePNG - INFO - 截取页面自定义大小 test_area_009.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:01:24,267 - screenAssert - INFO - Test case ID: test_area_010 
+2018-01-29 20:01:53,241 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:01:53,562 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:01:53,626 - APIDataInfo - INFO - My_api -> get_bind_id -> 默认账号18521524172 绑定的默认设备天机MINI03 bind_id 为 1097963 
+2018-01-29 20:01:53,686 - APIDataInfo - INFO - My_api -> get_area -> 默认账号18521524172 绑定的默认设备天机MINI03 -> 仅获取 list[0]
+2018-01-29 20:01:53,687 - APIDataInfo - INFO - My_api -> get_area -> 获取安全区域地址为 上海市徐汇区康健新村街道长海坊 
+2018-01-29 20:02:07,357 - screenAssert - INFO - Test case ID: test_area_011 
+2018-01-29 20:02:33,498 - screenAssert - INFO - Test case ID: test_area_012 
+2018-01-29 20:03:07,715 - screenAssert - INFO - Test case ID: test_area_013 
+2018-01-29 20:03:27,412 - CreatePNG - INFO - 截取页面自定义大小 test_area_013.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:03:40,741 - screenAssert - INFO - Test case ID: test_area_014 
+2018-01-29 20:03:54,070 - screenAssert - INFO - Test case ID: test_area_015 
+2018-01-29 20:04:26,073 - screenAssert - INFO - Test case ID: test_area_016 
+2018-01-29 20:05:00,907 - CreatePNG - INFO - 截取页面自定义大小 test_area_016.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:05:14,467 - screenAssert - INFO - Test case ID: test_area_017 
+2018-01-29 20:05:26,725 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:05:26,925 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:05:26,988 - APIDataInfo - INFO - My_api -> get_bind_id -> 默认账号18521524172 绑定的默认设备天机MINI03 bind_id 为 1097963 
+2018-01-29 20:05:27,039 - APIDataInfo - INFO - My_api -> get_area -> 默认账号18521524172 绑定的默认设备天机MINI03 -> 仅获取 list[0]
+2018-01-29 20:05:27,039 - APIDataInfo - INFO - My_api -> get_area -> 获取安全区域地址为 上海市闵行区古美街道东兰小区东兰路37弄小区 
+2018-01-29 20:05:40,545 - screenAssert - INFO - Test case ID: test_area_018 
+2018-01-29 20:06:06,807 - screenAssert - INFO - Test case ID: test_area_019 
+2018-01-29 20:06:30,745 - CreatePNG - INFO - 截取页面自定义大小 test_area_019.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:06:44,173 - screenAssert - INFO - Test case ID: test_area_020 
+2018-01-29 20:07:07,667 - CreatePNG - INFO - 截取页面自定义大小 test_area_020.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:07:21,579 - screenAssert - INFO - Test case ID: test_area_021 
+2018-01-29 20:07:44,934 - CreatePNG - INFO - 截取页面自定义大小 test_area_021.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:07:58,516 - screenAssert - INFO - Test case ID: test_area_022 
+2018-01-29 20:08:19,117 - CreatePNG - INFO - 截取页面自定义大小 test_area_022.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:08:32,553 - screenAssert - INFO - Test case ID: test_area_023 
+2018-01-29 20:08:59,164 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:08:59,385 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:08:59,451 - APIDataInfo - INFO - My_api -> get_bind_id -> 默认账号18521524172 绑定的默认设备天机MINI03 bind_id 为 1097963 
+2018-01-29 20:08:59,513 - APIDataInfo - INFO - My_api -> get_area -> 默认账号18521524172 绑定的默认设备天机MINI03 -> 仅获取 list[0]
+2018-01-29 20:08:59,514 - APIDataInfo - INFO - My_api -> get_area -> 获取安全区域地址为 上海市徐汇区田林街道中山西路2099-1号楼波涛家居(建材广场店) 
+2018-01-29 20:09:13,821 - screenAssert - INFO - Test case ID: test_area_024 
+2018-01-29 20:09:14,093 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:09:14,326 - APIDataInfo - INFO - My_api -> login_user -> 默认账号18521524172 -> 登陆成功
+2018-01-29 20:09:14,392 - APIDataInfo - INFO - My_api -> get_bind_id -> 默认账号18521524172 绑定的默认设备天机MINI03 bind_id 为 1097963 
+2018-01-29 20:09:14,453 - APIDataInfo - INFO - My_api -> get_area -> 默认账号18521524172 绑定的默认设备天机MINI03 -> 仅获取 list[0]
+2018-01-29 20:09:14,454 - APIDataInfo - INFO - My_api -> get_area -> 获取安全区域地址为 上海市徐汇区田林街道中山西路2099-1号楼波涛家居(建材广场店) 
+2018-01-29 20:09:54,834 - screenAssert - INFO - Test case ID: test_area_025 
+2018-01-29 20:10:12,035 - CreatePNG - INFO - 截取页面自定义大小 test_area_025.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:10:25,741 - screenAssert - INFO - Test case ID: test_area_026 
+2018-01-29 20:10:45,697 - CreatePNG - INFO - 截取页面自定义大小 test_area_026.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:10:59,397 - screenAssert - INFO - Test case ID: test_area_027 
+2018-01-29 20:11:36,452 - screenAssert - INFO - Test case ID: test_area_028 
+2018-01-29 20:12:18,689 - screenAssert - INFO - Test case ID: test_area_029 
+2018-01-29 20:13:03,746 - screenAssert - INFO - Test case ID: test_area_030 
+2018-01-29 20:13:32,285 - screenAssert - INFO - Test case ID: test_area_031 
+2018-01-29 20:13:57,672 - screenAssert - INFO - Test case ID: test_area_032 
+2018-01-29 20:14:16,188 - CreatePNG - INFO - 截取页面自定义大小 test_area_032.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:14:29,769 - screenAssert - INFO - Test case ID: test_area_033 
+2018-01-29 20:14:49,416 - CreatePNG - INFO - 截取页面自定义大小 test_area_033.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:15:08,908 - screenAssert - INFO - Test case ID: test_area_034 
+2018-01-29 20:15:37,106 - screenAssert - INFO - Test case ID: test_area_035 
+2018-01-29 20:15:58,397 - CreatePNG - INFO - 截取页面自定义大小 test_area_035.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:16:18,251 - screenAssert - INFO - Test case ID: test_area_036 
+2018-01-29 20:16:46,756 - screenAssert - INFO - Test case ID: test_area_037 
+2018-01-29 20:17:07,119 - CreatePNG - INFO - 截取页面自定义大小 test_area_037.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:17:20,891 - screenAssert - INFO - Test case ID: test_area_038 
+2018-01-29 20:18:05,253 - screenAssert - INFO - Test case ID: test_area_039 
+2018-01-29 20:18:44,404 - screenAssert - INFO - Test case ID: test_area_040 
+2018-01-29 20:20:34,419 - screenAssert - INFO - Test case ID: test_area_041 
+2018-01-29 20:20:56,106 - CreatePNG - INFO - 截取页面自定义大小 test_area_041.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:21:09,563 - screenAssert - INFO - Test case ID: test_area_042 
+2018-01-29 20:21:31,101 - CreatePNG - INFO - 截取页面自定义大小 test_area_042.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:21:44,568 - screenAssert - INFO - Test case ID: test_area_043 
+2018-01-29 20:22:15,459 - CreatePNG - INFO - 截取页面自定义大小 test_area_043.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:22:16,496 - AreaTest - CRITICAL - --------------------安全区域测试结束--------------------
+2018-01-29 20:22:16,497 - SettingTest - CRITICAL - --------------------登录页面注册功能测试开始--------------------
+2018-01-29 20:22:28,892 - screenAssert - INFO - Test case ID: test_setting_001_notifications 
+2018-01-29 20:22:42,426 - CreatePNG - INFO - 截取页面自定义大小 test_setting_001_notifications.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:22:57,075 - screenAssert - INFO - Test case ID: test_setting_002_notifications 
+2018-01-29 20:23:33,531 - screenAssert - INFO - Test case ID: test_setting_003_notifications 
+2018-01-29 20:24:09,416 - screenAssert - INFO - Test case ID: test_setting_004_toher 
+2018-01-29 20:24:22,855 - CreatePNG - INFO - 截取页面自定义大小 test_setting_004_toher.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:24:22,906 - screenAssert - ERROR - Test case ID: test_setting_004_toher 
+2018-01-29 20:24:25,646 - screenAssert - ERROR - Test case assertion failureGet, error info ( <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1080x1704 at 0x293BA57A2E8> != <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1080x1704 at 0x293BA5A48D0> )
+2018-01-29 20:24:25,646 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:24:40,411 - screenAssert - INFO - Test case ID: test_setting_005_toher 
+2018-01-29 20:24:55,870 - CreatePNG - INFO - 截取页面自定义大小 test_setting_005_toher.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:24:55,887 - screenAssert - ERROR - Test case ID: test_setting_005_toher 
+2018-01-29 20:24:58,591 - screenAssert - ERROR - Test case assertion failureGet, error info ( <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=918x627 at 0x293BA59B828> != <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=918x627 at 0x293BA556F28> )
+2018-01-29 20:24:58,591 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:25:12,967 - screenAssert - INFO - Test case ID: test_setting_006_toher 
+2018-01-29 20:25:35,235 - CreatePNG - INFO - 截取页面自定义大小 test_setting_006_toher.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:25:49,687 - screenAssert - INFO - Test case ID: test_setting_007_toher 
+2018-01-29 20:26:25,339 - screenAssert - INFO - Test case ID: test_setting_008_toher 
+2018-01-29 20:26:55,961 - screenAssert - INFO - Test case ID: test_setting_009_toher 
+2018-01-29 20:27:26,861 - screenAssert - INFO - Test case ID: test_setting_010_toher 
+2018-01-29 20:27:55,165 - screenAssert - INFO - Test case ID: test_setting_011_toher 
+2018-01-29 20:28:11,962 - SettingTest - CRITICAL - --------------------登录功能测试结束--------------------
+2018-01-29 20:28:11,962 - Child_device - CRITICAL - --------------------孩子设备测试开始--------------------
+2018-01-29 20:28:24,286 - screenAssert - INFO - Test case ID: test_child_device_001 
+2018-01-29 20:28:56,529 - screenAssert - INFO - Test case ID: test_child_device_002 
+2018-01-29 20:29:10,024 - CreatePNG - INFO - 截取页面自定义大小 test_child_device_002_1.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:29:17,527 - CreatePNG - INFO - 截取页面自定义大小 test_child_device_002_2.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:29:31,324 - screenAssert - INFO - Test case ID: test_child_device_003 
+2018-01-29 20:29:48,157 - CreatePNG - INFO - 截取页面自定义大小 test_child_device_003.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:30:03,492 - screenAssert - INFO - Test case ID: test_child_device_004 
+2018-01-29 20:30:41,954 - screenAssert - INFO - Test case ID: test_child_device_005 
+2018-01-29 20:31:21,159 - screenAssert - INFO - Test case ID: test_child_device_006 
+2018-01-29 20:31:55,240 - screenAssert - INFO - Test case ID: test_child_device_007 
+2018-01-29 20:32:32,557 - screenAssert - INFO - Test case ID: test_child_device_008 
+2018-01-29 20:33:09,075 - screenAssert - INFO - Test case ID: test_child_device_009 
+2018-01-29 20:33:43,434 - screenAssert - INFO - Test case ID: test_child_device_097 
+2018-01-29 20:34:20,104 - screenAssert - INFO - Test case ID: test_child_device_098 
+2018-01-29 20:35:07,271 - screenAssert - INFO - Test case ID: test_child_device_099 
+2018-01-29 20:35:21,401 - Child_device - CRITICAL - --------------------孩子设备测试结束--------------------
+2018-01-29 20:35:21,401 - FeedBack - CRITICAL - --------------------意见反馈测试开始--------------------
+2018-01-29 20:35:33,913 - screenAssert - INFO - Test case ID: test_feedback_001 
+2018-01-29 20:36:00,868 - screenAssert - INFO - Test case ID: test_feedback_002 
+2018-01-29 20:36:19,491 - CreatePNG - INFO - 截取页面自定义大小 test_feedback_002.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:36:32,829 - screenAssert - INFO - Test case ID: test_feedback_003 
+2018-01-29 20:37:09,116 - screenAssert - INFO - Test case ID: test_feedback_004 
+2018-01-29 20:37:44,185 - screenAssert - INFO - Test case ID: test_feedback_005 
+2018-01-29 20:38:20,002 - screenAssert - INFO - Test case ID: test_feedback_006 
+2018-01-29 20:38:57,167 - screenAssert - INFO - Test case ID: test_feedback_007 
+2018-01-29 20:39:22,012 - FeedBack - CRITICAL - --------------------意见反馈测试结束--------------------
+2018-01-29 20:39:22,013 - About_Us - CRITICAL - --------------------关于我们测试开始--------------------
+2018-01-29 20:39:34,553 - screenAssert - INFO - Test case ID: test_about_001 
+2018-01-29 20:39:53,019 - CreatePNG - INFO - 截取页面自定义大小 test_about_001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:40:06,497 - screenAssert - INFO - Test case ID: test_about_002 
+2018-01-29 20:40:29,490 - CreatePNG - INFO - 截取页面自定义大小 test_about_002.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:40:43,214 - screenAssert - INFO - Test case ID: test_about_003 
+2018-01-29 20:41:30,352 - screenAssert - ERROR - Test case ID: test_about_003 
+2018-01-29 20:41:33,117 - screenAssert - ERROR - Test case assertion failureGet, error info ( Message: 
+ )
+2018-01-29 20:41:33,117 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:41:46,573 - screenAssert - INFO - Test case ID: test_about_004 
+2018-01-29 20:42:17,986 - screenAssert - INFO - Test case ID: test_about_005 
+2018-01-29 20:42:34,566 - CreatePNG - INFO - 截取页面自定义大小 test_about_005.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:42:49,707 - screenAssert - INFO - Test case ID: test_about_006 
+2018-01-29 20:43:09,338 - CreatePNG - INFO - 截取页面自定义大小 test_about_006.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:43:24,045 - screenAssert - INFO - Test case ID: test_about_007 
+2018-01-29 20:43:42,947 - CreatePNG - INFO - 截取页面自定义大小 test_about_007_1.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:43:46,126 - CreatePNG - INFO - 截取页面自定义大小 test_about_007_2.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:44:00,981 - screenAssert - INFO - Test case ID: test_about_008 
+2018-01-29 20:44:28,924 - CreatePNG - INFO - 截取页面自定义大小 test_about_008.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:44:31,004 - screenAssert - ERROR - Test case ID: test_about_008 
+2018-01-29 20:44:33,988 - screenAssert - ERROR - Test case assertion failureGet, error info ( <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1000x1704 at 0x293BA5A0EB8> != <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1000x1704 at 0x293BA556438> )
+2018-01-29 20:44:33,988 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:44:47,668 - screenAssert - INFO - Test case ID: test_about_009 
+2018-01-29 20:45:08,023 - About_Us - CRITICAL - --------------------关于我们测试结束--------------------
+2018-01-29 20:45:08,023 - Account_Security - CRITICAL - --------------------账号与安全测试开始--------------------
+2018-01-29 20:45:20,502 - screenAssert - INFO - Test case ID: test_account_001 
+2018-01-29 20:45:43,643 - screenAssert - INFO - Test case ID: test_account_002 
+2018-01-29 20:45:56,785 - CreatePNG - INFO - 截取页面自定义大小 test_account_002.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:45:56,859 - screenAssert - ERROR - Test case ID: test_account_002 
+2018-01-29 20:45:59,572 - screenAssert - ERROR - Test case assertion failureGet, error info ( <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1080x1704 at 0x293BA4F0FD0> != <PIL.[13 chars]n.PngImageFile image mode=RGBA size=1080x1704 at 0x293BA5A1978> )
+2018-01-29 20:45:59,572 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:46:12,885 - screenAssert - INFO - Test case ID: test_account_003 
+2018-01-29 20:46:41,261 - screenAssert - INFO - Test case ID: test_account_004 
+2018-01-29 20:46:59,229 - CreatePNG - INFO - 截取页面自定义大小 test_account_004.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:47:06,737 - CreatePNG - INFO - 截取页面自定义大小 test_account_004_2.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:47:14,736 - CreatePNG - INFO - 截取页面自定义大小 test_account_004_3.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:47:33,976 - screenAssert - INFO - Test case ID: test_account_005 
+2018-01-29 20:48:01,011 - screenAssert - INFO - Test case ID: test_account_006 
+2018-01-29 20:48:19,436 - CreatePNG - INFO - 截取页面自定义大小 test_account_006_1.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:48:27,034 - CreatePNG - INFO - 截取页面自定义大小 test_account_006_2.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:48:36,515 - CreatePNG - INFO - 截取页面自定义大小 test_account_006_3.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:48:55,477 - screenAssert - INFO - Test case ID: test_account_007 
+2018-01-29 20:49:21,913 - screenAssert - INFO - Test case ID: test_account_008 
+2018-01-29 20:49:56,143 - screenAssert - INFO - Test case ID: test_account_009 
+2018-01-29 20:50:30,654 - screenAssert - INFO - Test case ID: test_account_010 
+2018-01-29 20:51:04,843 - screenAssert - INFO - Test case ID: test_account_011 
+2018-01-29 20:51:36,753 - screenAssert - INFO - Test case ID: test_account_012 
+2018-01-29 20:52:43,007 - screenAssert - INFO - Test case ID: test_account_099 
+2018-01-29 20:53:02,203 - Account_Security - CRITICAL - --------------------账号与安全测试结束--------------------
+2018-01-29 20:53:02,203 - LoginTest - CRITICAL - --------------------登录功能测试开始--------------------
+2018-01-29 20:53:16,298 - screenAssert - INFO - Test case ID: test_login_001 
+2018-01-29 20:53:28,545 - CreatePNG - INFO - 截取页面自定义大小 test_login_001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:53:46,298 - screenAssert - INFO - Test case ID: test_login_002 
+2018-01-29 20:53:57,536 - CreatePNG - INFO - 截取页面自定义大小 test_login_002.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 20:54:15,287 - screenAssert - INFO - Test case ID: test_login_003 
+2018-01-29 20:54:45,796 - screenAssert - INFO - Test case ID: test_login_004 
+2018-01-29 20:55:17,249 - screenAssert - INFO - Test case ID: test_login_005 
+2018-01-29 20:55:48,506 - screenAssert - INFO - Test case ID: test_login_006 
+2018-01-29 20:56:20,603 - screenAssert - INFO - Test case ID: test_login_007 
+2018-01-29 20:56:50,071 - screenAssert - INFO - Test case ID: test_login_008 
+2018-01-29 20:57:25,891 - screenAssert - INFO - Test case ID: test_login_009_qq 
+2018-01-29 20:58:14,557 - screenAssert - INFO - Test case ID: test_login_010_wx 
+2018-01-29 20:59:10,246 - screenAssert - ERROR - Test case ID: test_login_010_wx 
+2018-01-29 20:59:13,546 - screenAssert - ERROR - Test case assertion failureGet, error info ( Message: 
+ )
+2018-01-29 20:59:13,547 - screenAssert - ERROR - Test case assertion failureGet, the screen shot to save to '\report\assert_png\2018-01-29'
+2018-01-29 20:59:31,632 - screenAssert - INFO - Test case ID: test_login_011_sina 
+2018-01-29 21:00:04,471 - LoginTest - CRITICAL - --------------------登录功能测试结束--------------------
+2018-01-29 21:00:04,471 - SignUpTest - CRITICAL - --------------------登录页面注册功能测试开始--------------------
+2018-01-29 21:00:18,505 - screenAssert - INFO - Test case ID: test_signup_001_phone 
+2018-01-29 21:00:45,385 - screenAssert - INFO - Test case ID: test_signup_002_phone 
+2018-01-29 21:01:13,856 - screenAssert - INFO - Test case ID: test_signup_003_phone 
+2018-01-29 21:01:41,734 - screenAssert - INFO - Test case ID: test_signup_004_phone 
+2018-01-29 21:02:11,281 - screenAssert - INFO - Test case ID: test_signup_005_phone 
+2018-01-29 21:02:41,580 - screenAssert - INFO - Test case ID: test_signup_006_phone 
+2018-01-29 21:03:09,201 - screenAssert - INFO - Test case ID: test_signup_007_phone 
+2018-01-29 21:03:38,520 - screenAssert - INFO - Test case ID: test_signup_008_phone 
+2018-01-29 21:04:07,853 - screenAssert - INFO - Test case ID: test_signup_009_phone 
+2018-01-29 21:04:39,521 - screenAssert - INFO - Test case ID: test_signup_010_phone 
+2018-01-29 21:05:17,292 - screenAssert - INFO - Test case ID: test_signup_011_email 
+2018-01-29 21:05:46,974 - screenAssert - INFO - Test case ID: test_signup_012_email 
+2018-01-29 21:06:17,985 - screenAssert - INFO - Test case ID: test_signup_013_email 
+2018-01-29 21:06:47,380 - screenAssert - INFO - Test case ID: test_signup_014_email 
+2018-01-29 21:07:18,305 - screenAssert - INFO - Test case ID: test_signup_015_email 
+2018-01-29 21:07:48,743 - screenAssert - INFO - Test case ID: test_signup_016_email 
+2018-01-29 21:08:19,669 - screenAssert - INFO - Test case ID: test_signup_017_email 
+2018-01-29 21:08:50,728 - screenAssert - INFO - Test case ID: test_signup_018_email 
+2018-01-29 21:09:27,807 - screenAssert - INFO - Test case ID: test_signup_019_email 
+2018-01-29 21:10:11,983 - screenAssert - INFO - Test case ID: test_signup_020_account 
+2018-01-29 21:10:40,227 - screenAssert - INFO - Test case ID: test_signup_021_account 
+2018-01-29 21:11:09,333 - screenAssert - INFO - Test case ID: test_signup_022_account 
+2018-01-29 21:11:39,155 - screenAssert - INFO - Test case ID: test_signup_023_account 
+2018-01-29 21:12:17,028 - screenAssert - INFO - Test case ID: test_signup_024_account 
+2018-01-29 21:12:53,341 - screenAssert - INFO - Test case ID: test_signup_025_account 
+2018-01-29 21:13:32,781 - screenAssert - INFO - Test case ID: test_signup_026_account 
+2018-01-29 21:14:09,734 - screenAssert - INFO - Test case ID: test_signup_027_account 
+2018-01-29 21:14:45,992 - screenAssert - INFO - Test case ID: test_signup_028_account 
+2018-01-29 21:15:23,678 - screenAssert - INFO - Test case ID: test_signup_029_account 
+2018-01-29 21:15:59,214 - screenAssert - INFO - Test case ID: test_signup_030_account 
+2018-01-29 21:16:36,140 - screenAssert - INFO - Test case ID: test_signup_031_account 
+2018-01-29 21:16:58,080 - SignUpTest - CRITICAL - --------------------登录页面注册功能测试结束--------------------

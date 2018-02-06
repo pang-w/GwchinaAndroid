@@ -1,0 +1,5 @@
+2018-02-05 18:43:25,693 - LoginTest - CRITICAL - --------------------登录功能测试开始--------------------
+2018-02-05 18:43:55,725 - TestIDInfo - CRITICAL - Test case ID: test_login_001 
+2018-02-05 18:44:07,037 - CreatePNG - INFO - Save the custom size screen snapshot as the ‘.\data\loc_now’ folder. png : test_login_001 
+2018-02-05 18:44:30,493 - TestIDInfo - CRITICAL - Test case ID: test_login_005 
+2018-02-05 18:44:47,520 - LoginTest - CRITICAL - --------------------登录功能测试结束--------------------

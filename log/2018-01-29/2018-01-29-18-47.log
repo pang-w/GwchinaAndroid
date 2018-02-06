@@ -1,0 +1,10 @@
+2018-01-29 18:47:12,819 - screenAssert - INFO - Test case ID: test_home_A001 
+2018-01-29 18:47:24,976 - CreatePNG - INFO - 截取页面自定义大小 test_home_A001.png 图片保存至 .\data\loc_now 目录下
+2018-01-29 18:47:38,587 - screenAssert - INFO - Test case ID: test_home_A002 
+2018-01-29 18:48:04,814 - screenAssert - INFO - Test case ID: test_home_A003 
+2018-01-29 18:48:38,323 - screenAssert - INFO - Test case ID: test_home_A004 
+2018-01-29 18:49:06,005 - screenAssert - INFO - Test case ID: test_home_A005 
+2018-01-29 18:49:16,689 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 1} 
+2018-01-29 18:49:19,689 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 0} 
+2018-01-29 18:49:33,231 - screenAssert - INFO - Test case ID: test_home_A006 
+2018-01-29 18:50:05,582 - screenAssert - INFO - Test case ID: test_home_A007 

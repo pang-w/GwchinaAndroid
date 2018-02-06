@@ -1,0 +1,10 @@
+2018-01-31 09:43:52,513 - TestIDInfo - CRITICAL - Test case ID: test_home_A001 
+2018-01-31 09:44:03,271 - CreatePNG - INFO - Save the custom size screen snapshot as the ‘.\data\loc_now’ folder. png : test_home_A001 
+2018-01-31 09:44:15,218 - TestIDInfo - CRITICAL - Test case ID: test_home_A002 
+2018-01-31 09:44:42,459 - TestIDInfo - CRITICAL - Test case ID: test_home_A003 
+2018-01-31 09:45:13,275 - TestIDInfo - CRITICAL - Test case ID: test_home_A004 
+2018-01-31 09:45:38,438 - TestIDInfo - CRITICAL - Test case ID: test_home_A005 
+2018-01-31 09:45:53,868 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 1} 
+2018-01-31 09:45:57,431 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 0} 
+2018-01-31 09:46:09,236 - TestIDInfo - CRITICAL - Test case ID: test_home_A006 
+2018-01-31 09:46:36,827 - TestIDInfo - CRITICAL - Test case ID: test_home_A007 

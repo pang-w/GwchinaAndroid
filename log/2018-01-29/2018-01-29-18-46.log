@@ -1,0 +1,7 @@
+2018-01-29 18:47:00,027 - runAllTest - INFO - É¾³ýpage_pathÍ¼Æ¬,É¾³ýloc_now_pathÍ¼Æ¬
+2018-01-29 18:50:18,674 - HTMLTestRunner - CRITICAL -  =========== The test results ===========  
+2018-01-29 18:50:18,674 - HTMLTestRunner - CRITICAL -  result.success_count , Pass : 7 
+2018-01-29 18:50:18,675 - HTMLTestRunner - CRITICAL -  result.failure_count , Fail : 0 
+2018-01-29 18:50:18,675 - HTMLTestRunner - CRITICAL -  result.error_count   , Error: 0 
+2018-01-29 18:50:18,675 - HTMLTestRunner - CRITICAL -  all test cases : 7 
+2018-01-29 18:50:18,675 - HTMLTestRunner - CRITICAL -  =========== The test results ===========  
