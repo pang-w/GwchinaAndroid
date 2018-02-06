@@ -6,7 +6,7 @@ from PO.po_page import A1_homepage_page
 class HomePageTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.page = A1_homepage_page.HomePage(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

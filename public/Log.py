@@ -3,7 +3,7 @@ import logging
 import os.path,sys
 import time
 
-from config import readConfigInfo
+from config import configReadInfo
 
 abs_path = os.path.dirname(os.path.abspath('.'))
 
@@ -24,7 +24,7 @@ class Logger(object):
             6: logging.CRITICAL
         }
 
-        level = int(readConfigInfo.ReadConfig().readConfigInfo()['LogLevel'])
+        level = int(configReadInfo.ReadConfig().readConfigInfo()['LogLevel'])
         # 创建一个logger
         self.logger = logging.getLogger(logger)
         self.logger.setLevel(logLevel[level])
@@ -60,6 +60,6 @@ class Logger(object):
         return self.logger
 
 if __name__ == '__main__':
-    level = int(readConfigInfo.ReadConfig().readConfigInfo()['LogLevel'])
+    level = int(configReadInfo.ReadConfig().readConfigInfo()['LogLevel'])
 
     print(level)

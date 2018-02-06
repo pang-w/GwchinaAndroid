@@ -12,7 +12,7 @@ class TimeTest(unittest.TestCase):
         log.critical("--------------------时间管理测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.page = A3_time_man_page.time_page(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)
         self.base = Common.Action(self.driver)

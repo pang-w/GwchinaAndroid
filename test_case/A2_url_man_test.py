@@ -12,7 +12,7 @@ class URL_Management(unittest.TestCase):
         log.critical("--------------------网址管理测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.Page = A2_url_man_page.url_page(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

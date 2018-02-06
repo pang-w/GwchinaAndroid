@@ -14,7 +14,7 @@ class Child_device(unittest.TestCase):
         log.critical("--------------------孩子设备测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.Page = B3_childdevice_page.child_device(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

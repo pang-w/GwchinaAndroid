@@ -4,44 +4,46 @@
 发送测试报告邮件
 自动关闭AppiumServer
 '''
+import unittest
 import os,time
 from time import sleep
 from public import SendEmail
-import unittest
-
+from testDAL import AppiumServer
+from config import phoneGetConfigInfo
 from public import HTMLTestRunner,DefNowPng,Log
 
 log = Log.Logger(logger='runAllTest').getLog()
 absPath = os.path.dirname(os.path.abspath('.'))
-
 casePath = absPath + '\\test_case'
 report = absPath + "\\report\\report_html\\"
-
 page_path = absPath + '\\data\\page\\'
 loc_now_path = absPath + '\\data\\loc_now\\'
+node = phoneGetConfigInfo.ReadConfig().readAppiumData()['config']
+
+try:
+    sleep(5)
+    '''stopAppiumServer'''
+    AppiumServer.appiumServerNew().stopServer()
+finally:
+    '''startAppiumServer'''
+    sleep(5)
+    AppiumServer.appiumServerNew().startServer(node)
+    sleep(20)
+
+log.info('删除page_path图片,删除loc_now_path图片')
+DefNowPng.del_files(page_path)
+DefNowPng.del_files(loc_now_path)
 
 def Creatsuite():
     testUnit = unittest.TestSuite()
-
-    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test.py', top_level_dir=None)
-
+    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test1.py', top_level_dir=None)
     for test_suite in discover:
         for caseName in test_suite:
             testUnit.addTest(caseName)
         print(testUnit)
     return testUnit
 
-'''startAppiumServer'''
-startAppiumServer = absPath + '\\appiumserver\\startAppiumServer.bat'
-os.system('start %s ' % startAppiumServer)
-sleep(20)
-
-log.info('删除page_path图片,删除loc_now_path图片')
-DefNowPng.del_files(page_path)
-DefNowPng.del_files(loc_now_path)
-
 test_case = Creatsuite()
-
 now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
 day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
@@ -65,11 +67,10 @@ else:
 html_path = os.path.dirname(os.path.abspath('.')) + '\\report\\report_html\\' + day
 log_path = os.path.dirname(os.path.abspath('.')) + '\\log\\' + day
 
-HtmlPath = SendEmail.FindNewHtml(html_path)
-LogPath = SendEmail.FindNewLog(log_path)
-SendEmail.SendEmail(HtmlPath,LogPath)
+# HtmlPath = SendEmail.FindNewHtml(html_path)
+# LogPath = SendEmail.FindNewLog(log_path)
+# SendEmail.SendEmail(HtmlPath,LogPath)
 
 sleep(5)
 '''stopAppiumServer'''
-stopAppiumServer = absPath + '\\appiumserver\\stopAppiumServer.bat'
-os.system('start %s ' % stopAppiumServer)
+AppiumServer.appiumServerNew().stopServer()

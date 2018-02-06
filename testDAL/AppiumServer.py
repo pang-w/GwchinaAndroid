@@ -21,6 +21,7 @@ class appiumServer(object):
             p = Process(target=thread_1.start())
             p.start()
 
+
     def stopServer(self):
         os.system('taskkill /f /im  node.exe')
 
@@ -52,14 +53,28 @@ class RunServer(threading.Thread):
     def run(self):
         os.system(self.cmd)
 
+class appiumServerNew(object):
+
+    def startServer(self,cmd):
+        thread_1 = RunServer(cmd)
+        thread_1.start()
+
+    def stopServer(self):
+        os.system('taskkill /f /im  node.exe')
+
 if __name__ == '__main__':
     import os
-    from Phone import getYamlData
 
-    list_devices = os.path.dirname(os.path.abspath('.')) + '\\Phone\\devices.yaml'
-    oo = appiumServer(getYamlData.getYaml(list_devices))
+    from config import phoneGetConfigInfo
+    node = phoneGetConfigInfo.ReadConfig().readAppiumData()['config']
+
+    print(node)
+    appiumServerNew().startServer(node)
+
+    # oo = appiumServer(getYamlData.getYaml(list_devices))
+    #
     # oo.startServer()
     # print("strart server")
     # print("running server")
-    oo.stopServer()
-    print("stop server")
+    # oo.stopServer()
+    # print("stop server")

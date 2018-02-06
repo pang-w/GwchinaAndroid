@@ -13,7 +13,7 @@ class SignUpTest(unittest.TestCase):
         log.critical("--------------------登录页面注册功能测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTestclear().get_driver()
+        self.driver = GetPhoneInfo.Appium().driverClear()
         self.Page = Z2_sign_up_page.LoginPage(self.driver)
         self.base = Common.Action(self.driver)
 

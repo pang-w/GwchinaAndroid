@@ -12,7 +12,7 @@ class AreaTest(unittest.TestCase):
         log.critical("--------------------安全区域测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.page = A6_area_man_page.AreaPage(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

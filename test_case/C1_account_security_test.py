@@ -11,7 +11,7 @@ class Account_Security(unittest.TestCase):
         log.critical("--------------------账号与安全测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.Page = C1_account_page.AccountPage(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

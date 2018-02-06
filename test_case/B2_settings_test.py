@@ -14,7 +14,7 @@ class SettingTest(unittest.TestCase):
         log.critical("--------------------登录页面注册功能测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.page = B2_settings_page.SettingPage(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

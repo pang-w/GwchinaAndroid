@@ -12,7 +12,7 @@ class FeedBack(unittest.TestCase):
         log.critical("--------------------意见反馈测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.Page = B8_feedback_page.config(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

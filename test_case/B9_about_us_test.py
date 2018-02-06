@@ -14,7 +14,7 @@ class About_Us(unittest.TestCase):
         log.critical("--------------------关于我们测试开始--------------------")
 
     def setUp(self):
-        self.driver = GetPhoneInfo.AppiumTest().get_driver()
+        self.driver = GetPhoneInfo.Appium().driver()
         self.Page = B9_about_us_page.About_us(self.driver)
         self.base = Common.Action(self.driver)
         self.png = CreatePng.CreatePNG(self.driver)

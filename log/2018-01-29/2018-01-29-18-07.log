@@ -1,3 +1,0 @@
-2018-01-29 18:08:24,347 - CreatePNG - INFO - 截取页面自定义大小 test_home_A001.png 图片保存至 .\data\loc_now 目录下
-2018-01-29 18:10:13,224 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 1} 
-2018-01-29 18:10:16,204 - SQLDataInfo - INFO - 从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' {'locked': 0} 

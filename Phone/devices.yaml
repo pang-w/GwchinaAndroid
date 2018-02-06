@@ -1,5 +1,0 @@
-appium:
- - devices: 83d7d437
-   port: 4723
-   config: node C:\Users\Administrator\AppData\Local\Programs\appium-desktop\resources\app\node_modules\appium\build\lib\main.js -p 4723 -bp 4724 -U 83d7d437
-   platformName: android
