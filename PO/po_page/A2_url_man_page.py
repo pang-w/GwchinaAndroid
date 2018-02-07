@@ -142,5 +142,5 @@ class url_page(Common.Action):
     def click_add_key(self):
         self.find_element(*self.add_key_btn).click()
     def go_key(self):
-        self.click_url_btn()
+        self.go_url_homepage()
         self.click_key()

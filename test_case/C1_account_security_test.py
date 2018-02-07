@@ -27,6 +27,7 @@ class Account_Security(unittest.TestCase):
         '''账号与安全页面默认值'''
         self.Page.click_setting()
         self.Page.click_account()
+        self.base.is_display_loc(self.Page.all_back_loc)
         self.png.CreateCustomSizeNowPNG('test_account_002',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_account_002'),self.base.getLocNow('test_account_002'))
 

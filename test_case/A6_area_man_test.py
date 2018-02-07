@@ -98,6 +98,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_save_or_edit()
         self.page.click_def()
         self.page.click_positive()
+
         self.png.CreateCustomSizeNowPNG('test_area_009',0,240,1080,798)
         old = self.base.gerLocOld('test_area_009')
         now = self.base.getLocNow('test_area_009')

@@ -639,6 +639,7 @@ class URL_Management(unittest.TestCase):
         self.Page.click_key_switch()
         sleep(1)
         self.Page.click_popup_negative_btn()
+        self.base.is_display('id',self.Page.key_switch_btn[1])
         self.png.CreateCustomSizeNowPNG('test_url_E003_key',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_url_E003_key'),self.base.getLocNow('test_url_E003_key'))
 

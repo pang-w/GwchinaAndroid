@@ -30,6 +30,7 @@ class TimeTest(unittest.TestCase):
         '''进入时间管理验证引导页查看更多页面显示'''
         self.page.click_time_btn()
         self.page.click_more()
+        sleep(3)
         self.png.CreateCustomSizeNowPNG('test_time_002',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_time_002'),self.base.getLocNow('test_time_002'))
         self.page.click_back()
@@ -66,7 +67,6 @@ class TimeTest(unittest.TestCase):
     def test_time_A006(self):
         '''进入时间管理验证默认时段时间表显示，截图对比默认进入时间管理的周期页面，时间表和时段'''
         self.page.go_time_homepage()
-        self.base.is_display_loc(self.page.time_1_btn)
         self.png.CreateCustomSizeNowPNG('test_time_006',0,548,1080,1273)
         self.assertEqual(self.base.gerLocOld('test_time_006'),self.base.getLocNow('test_time_006'))
 
@@ -128,6 +128,7 @@ class TimeTest(unittest.TestCase):
         self.base.swipe_screen(200,600,1040,600,500)
         self.page.click_save()
         self.page.click_save_positive()
+        self.base.is_display_loc(self.page.time_1_btn)
         self.assertEqual(self.base.get_assert('id','com.gwchina.lssw.parent:id/tv_time').text,'06:00-24:00')
 
     # def test_time_A8(self):

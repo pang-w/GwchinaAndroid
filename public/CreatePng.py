@@ -57,6 +57,8 @@ class CreatePNG(object):
         newImage.save(PngDataPath +  '\\loc_old\\%s.png' % png)
 
     def CreateCustomSizeNowPNG(self,png,start_x,start_y,end_x,end_y):
+        from time import sleep
+        sleep(2)
         self.driver.get_screenshot_as_file(PngDataPath +  '\\page\\%s_page.png' % png)
         box = (start_x, start_y, end_x, end_y)
         image = Image.open(PngDataPath +  '\\page\\%s_page.png' % png)

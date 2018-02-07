@@ -16,7 +16,7 @@ class Action():
 
     def find_element(self,*loc):
         try:
-            WebDriverWait(self.driver, 30, 0.5).until(EC.visibility_of_element_located(loc))
+            WebDriverWait(self.driver, 20, 0.5).until(EC.visibility_of_element_located(loc))
             try:
                 WebDriverWait(self.driver,10,0.5,).until(lambda driver: driver.find_element(*loc).is_displayed())
                 return self.driver.find_element(*loc)
@@ -31,11 +31,11 @@ class Action():
     def is_display(self,mode,locator):
         try:
             if mode == 'id':
-                WebDriverWait(self.driver,30,0.5).until(EC.visibility_of_element_located((By.ID, locator)))
-                # print('is_display已找到 %s 元素' % locator)
+                WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located((By.ID, locator)))
+                print('is_display已找到 %s 元素' % locator)
                 return True
             elif mode == 'xpath':
-                WebDriverWait(self.driver,30,0.5).until(EC.visibility_of_element_located((By.XPATH, locator)))
+                WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located((By.XPATH, locator)))
                 # print('is_display已找到 %s 元素' % locator)
                 return True
 
@@ -46,7 +46,7 @@ class Action():
 
     def is_display_loc(self,locator):
         try:
-            WebDriverWait(self.driver,30,0.5).until(EC.visibility_of_element_located(locator))
+            WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located(locator))
             # print('is_display_loc已找到元素')
             return True
         except:
@@ -91,7 +91,7 @@ class Action():
         window_size = self.get_size()
         width = window_size.get("width")
         height = window_size.get("height")
-        print(width,height)
+        sleep(2)
         self.driver.swipe(start_x, start_y, end_x, end_y, time)
         sleep(1)
     def click_point(self,piont_x,piont_y):

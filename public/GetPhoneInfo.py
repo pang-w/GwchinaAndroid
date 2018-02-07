@@ -19,9 +19,11 @@ class Appium(object):
                         'appPackage': self.desired_caps['appPackage'],
                         # 'noReset' : 'True',  # 去掉，每次启动app都会清除数据
                         'automationName': self.desired_caps['automationName'],
-                        'appActivity': self.desired_caps['appActivity']
+                        'appActivity': self.desired_caps['appActivity'],
+                        'uuid': self.desired_caps['deviceName'],
                         }
         self.driver = webdriver.Remote(self.desired_caps['remote'], desired_caps)
+        self.driver.implicitly_wait(30)
         return self.driver
 
     def driver(self):
@@ -31,9 +33,24 @@ class Appium(object):
                         'appPackage': self.desired_caps['appPackage'],
                         'noReset' : 'True',  # 去掉，每次启动app都会清除数据
                         'automationName': self.desired_caps['automationName'],
-                        'appActivity': self.desired_caps['appActivity']
+                        'appActivity': self.desired_caps['appActivity'],
+                        'uuid':self.desired_caps['deviceName'],
                         }
         self.driver = webdriver.Remote(self.desired_caps['remote'], desired_caps)
+        self.driver.implicitly_wait(30)
+        return self.driver
+
+    def driverOld(self):
+        desired_caps = {'platformName': 'Android',
+                        'platformVersion': '5.1.1',
+                        'deviceName': 'ZTE B2015',
+                        'appPackage': 'com.gwchina.lssw.parent',
+                        'automationName': 'Uiautomator2',
+                        'noReset': 'True',  # 去掉，每次启动app都会清除数据
+                        'appActivity': 'com.gwchina.tylw.parent.StartEntryActivity'
+                        }
+        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        self.driver.implicitly_wait(30)
         return self.driver
 
 if __name__ == '__main__':

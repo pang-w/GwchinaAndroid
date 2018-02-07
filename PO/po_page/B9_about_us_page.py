@@ -80,5 +80,6 @@ class About_us(Common.Action):
         self.click_setting()
         self.swipe_to_down(1.2, 10)
         self.click_about_us()
+        self.is_display_loc(self.version_loc)
 
 

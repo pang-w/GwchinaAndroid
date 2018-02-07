@@ -96,6 +96,8 @@ class child_device(Common.Action):
     def go_child_device(self):
         self.click_setting()
         self.click_device()
+        self.is_display_loc(self.device_title_loc)
+
 
     def swipe_to_child_down(self,start_x,start_y,end_x,end_y):  #分辨率适用于天机MINI（锁定菜单栏）
         # 下滑屏幕

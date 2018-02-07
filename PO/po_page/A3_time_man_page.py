@@ -8,7 +8,7 @@ log = Log.Logger(logger='time_page').getLog()
 
 class time_page(Common.Action):
 
-    time_btn_loc = (By.XPATH, '//android.widget.TextView[@text="时间管理"]')
+    time_btn_loc = A3_time_man_btn.config['time_btn_loc']
     Guide_home_page_btn = (By.ID,'com.gwchina.lssw.parent:id/iv_time_guide')
     Guide_confirm_page_btn = (By.ID, 'com.gwchina.lssw.parent:id/tv_confirm')
     more_btn = (By.ID,'com.gwchina.lssw.parent:id/tv_more')
@@ -18,7 +18,7 @@ class time_page(Common.Action):
     back_btn = (By.ID,'com.gwchina.lssw.parent:id/iv_back')
 
     def click_time_btn(self):
-        sleep(5)
+        self.is_display_loc(self.homepage_child_head_btn)
         self.find_element(*self.time_btn_loc).click()
     def click_Guide_confirm(self):
         self.find_element(*self.Guide_confirm_page_btn).click()
@@ -62,6 +62,7 @@ class time_page(Common.Action):
     def go_time_homepage(self):
         self.is_display_loc(self.homepage_child_head_btn)
         self.click_time_btn()
+        self.is_display('id','com.gwchina.lssw.parent:id/tv_time')
         # loc = self.is_display_loc(self.save_btn)
         # time = 1
         # while loc == False and time <= 5:

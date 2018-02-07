@@ -47,6 +47,7 @@ class config(Common.Action):
         self.click_setting()
         self.swipe_to_down(1.2, 10)
         self.click_feedback()
+        self.is_display_loc(self.submit_loc)
 
     def input_msg(self,feedback,contact):
         sleep(1)
