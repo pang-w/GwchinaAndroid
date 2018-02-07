@@ -57,25 +57,27 @@ class time_page(Common.Action):
     def click_time_7(self):
         self.find_element(*self.time_7_btn).click()
 
+    homepage_child_head_btn = (By.ID, 'com.gwchina.lssw.parent:id/tv_child_nick')#主页上孩子头像按钮（如果存在=刷新出设备）
+
     def go_time_homepage(self):
-        sleep(5)
+        self.is_display_loc(self.homepage_child_head_btn)
         self.click_time_btn()
-        loc = self.is_display_loc(self.save_btn)
-        time = 1
-        while loc == False and time <= 5:
-            log.info('A3_time_man_test（go_time_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            print('A3_time_man_test（go_time_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            sleep(2)
-            self.driver.find_element_by_id('com.gwchina.lssw.parent:id/btn_negative').click()
-            sleep(5)
-            self.click_time_btn()
-            sleep(2)
-            time += 1
-            loc = self.is_display_loc(self.save_btn)
-            if time > 5 :
-                log.info('A3_time_man_test（go_time_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                print('A3_time_man_test（go_time_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                break
+        # loc = self.is_display_loc(self.save_btn)
+        # time = 1
+        # while loc == False and time <= 5:
+        #     log.info('A3_time_man_test（go_time_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     print('A3_time_man_test（go_time_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     sleep(2)
+        #     self.driver.find_element_by_id('com.gwchina.lssw.parent:id/btn_negative').click()
+        #     sleep(5)
+        #     self.click_time_btn()
+        #     sleep(2)
+        #     time += 1
+        #     loc = self.is_display_loc(self.save_btn)
+        #     if time > 5 :
+        #         log.info('A3_time_man_test（go_time_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         print('A3_time_man_test（go_time_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         break
 
     # @classmethod
     def get_weekday(self):

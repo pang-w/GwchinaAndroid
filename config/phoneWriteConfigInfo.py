@@ -12,6 +12,7 @@ from config import configReadInfo
 now = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
 apkPath = os.path.dirname(os.path.abspath('.')) + '\\ApkData\\GreenBox_Parent_v6.0.0_Nightly_Cs_1801290007.apk'
 absPath = os.path.dirname(os.path.abspath('.'))
+appiumLogName = absPath + '\\log\\%s_appium.log' % now
 
 
 class writePhoneInfo(object):
@@ -34,7 +35,7 @@ class writePhoneInfo(object):
         self.config.add_section("appium")
         self.config.set("appium", "devices", self.devices)
         self.config.set("appium", "port", self.port)
-        self.config.set("appium", "config", r"node C:\Users\Administrator\AppData\Local\Programs\appium-desktop\resources\app\node_modules\appium\build\lib\main.js -p %s -bp 4724 -U %s" % (self.port,self.devices))
+        self.config.set("appium", "config", r"node C:\Users\Administrator\AppData\Local\Programs\appium-desktop\resources\app\node_modules\appium\build\lib\main.js -p %s -bp 4724 -U %s --log %s" % (self.port,self.devices,appiumLogName))
         self.config.set("appium", "platformName", self.platformName)
 
         self.config.add_section("desired_caps")

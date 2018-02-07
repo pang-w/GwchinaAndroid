@@ -13,7 +13,7 @@ def get_area_list():
         #获取 com_device_state 表里的锁屏状态  locdek = 1 锁屏，locdek = 0 解屏
         #id = 948807 天机MINI 03
         #id = 948688 天机MINI 05
-        cursor.execute("select value from com_param_device where name = 'rail_position' and bind_id = 1097963")
+        cursor.execute("select value from com_param_device where name = 'rail_position' and bind_id = 1097127")
         lock = cursor.fetchall()
         #关闭游标、关闭数据库连接
         cursor.close()
@@ -59,7 +59,7 @@ def sql_url_limit_id():
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         #获取 com_rule_url2 表里的 url_limit_id = 1 严格  2 标准 3 轻松
-        cursor.execute("select url_limit_id from com_rule_url2 where bind_id = 1097963 AND active = 1")
+        cursor.execute("select url_limit_id from com_rule_url2 where bind_id = 1097127 AND active = 1")
         url_ids = cursor.fetchall()
         # sql_url_ids 为 （） 时，加上以下日志会返回None，print('连接SQL失败')
         # My_log.pyweblog().info('从SQL获取网址管理等级 %s ' % url_ids)
@@ -78,7 +78,7 @@ def sql_url_black_white(type):
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         #获取 com_rule_url 表里的 type_flag = 0 黑名单 = 1 白名单
         if type == 0:
-            cursor.execute("select url_domain from com_rule_url where bind_id = 1097963 AND type_flag = 0 AND active = 1")
+            cursor.execute("select url_domain from com_rule_url where bind_id = 1097127 AND type_flag = 0 AND active = 1")
             black_list = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -87,7 +87,7 @@ def sql_url_black_white(type):
             #     return black
             return black_list
         elif type == 1:
-            cursor.execute("select url_domain from com_rule_url where bind_id = 1097963 AND type_flag = 1 AND active = 1")
+            cursor.execute("select url_domain from com_rule_url where bind_id = 1097127 AND type_flag = 1 AND active = 1")
             white_list = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -103,7 +103,7 @@ def sql_url_key():
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         #获取 com_rule_keyword 表里的 active = 1 逻辑删除 1 未删除 0 已删除，但仍然保存在数据库
-        cursor.execute("select keyword from com_rule_keyword where bind_id = 1097963 and active = 1")
+        cursor.execute("select keyword from com_rule_keyword where bind_id = 1097127 and active = 1")
 
         # cursor.fetchone()   取一条数据  cursor.fetchall()取满足条件的所有数据
         # row_1 = cursor.fetchone()
@@ -120,14 +120,14 @@ def sql_url_key():
 def sql_switch_key():
     '''获取切换网址管理 - 关键字 - 系统关键字的开关值  offline_keyword_shielding  0 - 关  1 - 开'''
     '''
-    "select `value` from com_param_device where bind_id = 1097963 and `name` = 'offline_keyword_shielding'"
+    "select `value` from com_param_device where bind_id = 1097127 and `name` = 'offline_keyword_shielding'"
     value、name 作为sql 关键字，查询时需加上 ` ` （1左边的符号）,查看字符类型值需加上 ' '
     '''
     try:
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         #获取 com_rule_url2 表里的 url_limit_id = 1 严格  2 标准 3 轻松
-        cursor.execute("select `value` from com_param_device where bind_id = 1097963 and `name` = 'offline_keyword_shielding'")
+        cursor.execute("select `value` from com_param_device where bind_id = 1097127 and `name` = 'offline_keyword_shielding'")
         sql_switch_key = cursor.fetchone()
         # sql_url 为 （） 时，加上以下日志会返回None，print('连接SQL失败')
         # My_log.pyweblog().info('从SQL获取黑、白名单网址 %s ' % url)
@@ -146,7 +146,7 @@ def sql_locked():
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
         #获取 com_device_state 表里的锁屏状态  locdek = 1 锁屏，locdek = 0 解屏
-        cursor.execute("select locked from com_device_state where bind_id = 1097963")
+        cursor.execute("select locked from com_device_state where bind_id = 1097127")
 
         lock = cursor.fetchone()
         log.info("从SQL获取锁屏状态'1 == 锁屏， 0 == 解屏' %s " % lock)

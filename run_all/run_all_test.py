@@ -36,7 +36,7 @@ DefNowPng.del_files(loc_now_path)
 
 def Creatsuite():
     testUnit = unittest.TestSuite()
-    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test1.py', top_level_dir=None)
+    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test.py', top_level_dir=None)
     for test_suite in discover:
         for caseName in test_suite:
             testUnit.addTest(caseName)
@@ -67,9 +67,9 @@ else:
 html_path = os.path.dirname(os.path.abspath('.')) + '\\report\\report_html\\' + day
 log_path = os.path.dirname(os.path.abspath('.')) + '\\log\\' + day
 
-# HtmlPath = SendEmail.FindNewHtml(html_path)
-# LogPath = SendEmail.FindNewLog(log_path)
-# SendEmail.SendEmail(HtmlPath,LogPath)
+HtmlPath = SendEmail.FindNewHtml(html_path)
+LogPath = SendEmail.FindNewLog(log_path)
+SendEmail.SendEmail(HtmlPath,LogPath)
 
 sleep(5)
 '''stopAppiumServer'''

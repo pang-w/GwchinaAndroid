@@ -48,7 +48,7 @@ class About_Us(unittest.TestCase):
         try:
             self.assertEqual(self.base.get_assert('id',self.Page.default_about_title_loc[1]).text,'格雷盒子')
         finally:
-            self.assertEqual(self.base.get_assert('id', self.Page.default_version_loc[1]).text, 'V6.0.0')
+            self.assertEqual(self.base.get_assert('id', self.Page.default_version_loc[1]).text, 'V6.0.1')
 
     @ScreenAssert.decorator
     def test_about_005(self):

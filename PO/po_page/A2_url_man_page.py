@@ -87,24 +87,24 @@ class url_page(Common.Action):
         self.click_popup_positive_btn()
 
     def go_url_homepage(self):
-        sleep(5)
+        self.is_display_loc(self.homepage_child_head_btn)
         self.click_url_btn()
-        loc = self.is_display_loc(self.rank_btn_loc)
-        time = 1
-        while loc == False and time <= 5:
-            log.info('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            print('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            sleep(2)
-            self.click_popup_negative_btn()
-            sleep(5)
-            self.click_url_btn()
-            sleep(2)
-            time += 1
-            loc = self.is_display_loc(self.rank_btn_loc)
-            if time > 5:
-                log.info('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                print('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                break
+        # loc = self.is_display_loc(self.rank_btn_loc)
+        # time = 1
+        # while loc == False and time <= 5:
+        #     log.info('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     print('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     sleep(2)
+        #     self.click_popup_negative_btn()
+        #     sleep(5)
+        #     self.click_url_btn()
+        #     sleep(2)
+        #     time += 1
+        #     loc = self.is_display_loc(self.rank_btn_loc)
+        #     if time > 5:
+        #         log.info('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         print('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         break
 
     def go_black_list(self):
         self.go_url_homepage()

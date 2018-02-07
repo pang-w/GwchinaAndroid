@@ -46,7 +46,7 @@ class Action():
 
     def is_display_loc(self,locator):
         try:
-            WebDriverWait(self.driver,15,0.5).until(EC.visibility_of_element_located(locator))
+            WebDriverWait(self.driver,30,0.5).until(EC.visibility_of_element_located(locator))
             # print('is_display_loc已找到元素')
             return True
         except:

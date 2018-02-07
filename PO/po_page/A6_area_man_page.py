@@ -1,6 +1,7 @@
 from PO.po_btn import A6_area_man_btn
 from public import Common,Log
 from time import sleep
+from selenium.webdriver.common.by import By
 
 '''
 安全区域页面
@@ -105,24 +106,26 @@ class AreaPage(Common.Action):
     def rb_radius_num_text(self):
         return self.find_element(*self.rb_radius_num).text
 
+    homepage_child_head_btn = (By.ID, 'com.gwchina.lssw.parent:id/tv_child_nick')#主页上孩子头像按钮（如果存在=刷新出设备）
+
     def go_area_homepage(self):
-        sleep(5)
+        self.is_display_loc(self.homepage_child_head_btn)
         self.click_area()
-        loc = self.is_display_loc(self.add_area_btn)
-        time = 1
-        while loc == False and time <= 5:
-            log.info('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            print('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
-            sleep(1)
-            self.click_negative()
-            sleep(5)
-            self.click_area()
-            time += 1
-            loc = self.is_display_loc(self.add_area_btn)
-            if time > 5:
-                log.info('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                print('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
-                break
+        # loc = self.is_display_loc(self.add_area_btn)
+        # time = 1
+        # while loc == False and time <= 5:
+        #     log.info('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     print('A2_url_man_test（go_url_homepage）未刷新出孩子设备，第 %s 次重试' % time)
+        #     sleep(1)
+        #     self.click_negative()
+        #     sleep(5)
+        #     self.click_area()
+        #     time += 1
+        #     loc = self.is_display_loc(self.add_area_btn)
+        #     if time > 5:
+        #         log.info('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         print('A2_url_man_test（go_url_homepage）尝试刷新5次孩子设备，未刷新出孩子设备，多数为网络原因')
+        #         break
 
     '''
     以下为优化的流程
