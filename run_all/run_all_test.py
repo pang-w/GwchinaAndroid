@@ -25,7 +25,7 @@ DefNowPng.del_files(loc_now_path)
 
 def Creatsuite():
     testUnit = unittest.TestSuite()
-    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test1.py', top_level_dir=None)
+    discover = unittest.defaultTestLoader.discover(casePath, pattern='*_test.py', top_level_dir=None)
     for test_suite in discover:
         for caseName in test_suite:
             testUnit.addTest(caseName)
