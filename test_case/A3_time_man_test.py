@@ -76,23 +76,27 @@ class TimeTest(unittest.TestCase):
         self.page.go_time_homepage()
         try:
             self.page.click_time_1()
+            sleep(2)
             self.assertEqual(self.base.get_assert('id','com.gwchina.lssw.parent:id/title').text,'周一可用时段')
             self.assertEqual(self.base.get_assert('id','com.gwchina.lssw.parent:id/tv_title_useduration').text,'周一可用时长')
         finally:
             try:
                 self.page.click_time_2()
+                sleep(2)
                 self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text, '周二可用时段')
                 self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/tv_title_useduration').text,
                                  '周二可用时长')
             finally:
                 try:
                     self.page.click_time_3()
+                    sleep(2)
                     self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text, '周三可用时段')
                     self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/tv_title_useduration').text,
                                      '周三可用时长')
                 finally:
                     try:
                         self.page.click_time_4()
+                        sleep(2)
                         self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text, '周四可用时段')
                         self.assertEqual(
                             self.base.get_assert('id', 'com.gwchina.lssw.parent:id/tv_title_useduration').text,
@@ -100,6 +104,7 @@ class TimeTest(unittest.TestCase):
                     finally:
                         try:
                             self.page.click_time_5()
+                            sleep(2)
                             self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text,
                                              '周五可用时段')
                             self.assertEqual(
@@ -108,6 +113,7 @@ class TimeTest(unittest.TestCase):
                         finally:
                             try:
                                 self.page.click_time_6()
+                                sleep(2)
                                 self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text,
                                                  '周六可用时段')
                                 self.assertEqual(
@@ -115,6 +121,7 @@ class TimeTest(unittest.TestCase):
                                     '周六可用时长')
                             finally:
                                 self.page.click_time_7()
+                                sleep(2)
                                 self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/title').text,
                                                  '周日可用时段')
                                 self.assertEqual(

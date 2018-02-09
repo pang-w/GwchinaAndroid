@@ -1,8 +1,8 @@
 # _*_ coding: utf-8 _*_
-import logging
-import os.path,sys
-import time
 
+import os
+import time
+import logging
 from config import configReadInfo
 
 abs_path = os.path.dirname(os.path.abspath('.'))
@@ -32,9 +32,7 @@ class Logger(object):
         # 创建一个handler，用于写入日志文件
         now = time.strftime('%Y-%m-%d-%H-%M', time.localtime(time.time()))
         day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        # log_path = os.path.dirname(os.getcwd()) + '/log/'  # 项目根目录下/Logs 保存日志
         log_path = abs_path + '\\log\\' + day + '\\'
-        # 如果case组织结构式 /testsuit/featuremodel/xxx.py ， 那么得到的相对路径的父路径就是项目根目录
         if os.path.exists(log_path):
             log_name = os.path.join(log_path + now + '.log')
         else:

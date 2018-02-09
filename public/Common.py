@@ -40,18 +40,16 @@ class Action():
         sleep(1)
         try:
             WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located(loc))
-        except Exception as e:
-            log.error("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % loc[1])
-            log.error("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % e)
+        except:
+            log.info("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element , Keep ‘find_element(*loc).is_displayed()’ this element. " % loc[1])
         finally:
             try:
                 WebDriverWait(self.driver,20,0.5,).until(lambda driver: driver.find_element(*loc).is_displayed())
                 return self.driver.find_element(*loc)
-            except Exception as e:
+            except:
                 SaveCreen.ScreenShot(self.driver).saveScreen()
-                log.error("‘find_element(*loc).is_displayed()’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % e )
                 log.error("‘find_element(*loc).is_displayed()’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % loc[1])
-        sleep(1)
+        sleep(0.5)
 
     # 一直等待某元素可见,默认参数 mode = id
     def is_display(self,locator,mode='id',):
@@ -63,15 +61,14 @@ class Action():
                 WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located((By.XPATH, locator)))
                 return True
         except Exception as e:
-            log.info("‘is_display’ No find this ‘%s’ elements , Cases Running " % e )
             log.info("‘is_display’ No find this ‘%s’ elements , Cases Running " % locator)
             pass
             # return False
 
+    #使用会出问题
     def is_display_loc(self,locator):
         try:
             WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located(locator))
-            # print('is_display_loc已找到元素')
             return True
         except:
             log.error("‘is_display_loc’ Failed to find ‘%s’ elements" % locator[1])

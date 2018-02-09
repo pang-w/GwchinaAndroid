@@ -12,8 +12,9 @@ class ReadConfig(object):
         self.configPath = os.path.dirname(os.path.abspath('.')) + '\\config\\phoneConfigDevices.ini'
         self.config = configparser.ConfigParser()
         self.config.read(self.configPath)
-        self.configAppiumDict = {}
-        self.configDesiredCapsDict = {}
+        self.configAppiumDict = {'devices':'','port':'','config':'','platformName':''}
+        self.configDesiredCapsDict = {'platformName':'','platformVersion':'','deviceName':'','appPackage':'','automationName':'',
+                                      'appActivity':'','uuid':'','remote':''}
 
     def readAppiumData(self):
         self.configAppiumDict['devices'] = self.config.get('appium','devices')

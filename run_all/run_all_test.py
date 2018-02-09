@@ -15,17 +15,10 @@ from public import HTMLTestRunner,DefNowPng,Log
 now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
 day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
-
 log = Log.Logger(logger='runAllTest').getLog()
 absPath = os.path.dirname(os.path.abspath('.'))
 casePath = absPath + '\\test_case'
 report = absPath + "\\report\\report_html\\"
-page_path = absPath + '\\data\\page\\'
-loc_now_path = absPath + '\\data\\loc_now\\'
-
-log.info('删除page_path图片,删除loc_now_path图片')
-DefNowPng.del_files(page_path)
-DefNowPng.del_files(loc_now_path)
 
 def Creatsuite():
     testUnit = unittest.TestSuite()
@@ -64,14 +57,21 @@ def sendEmail():
     SendEmail.SendEmail(HtmlPath,LogPath)
 
 if __name__ == '__main__':
+
+    page_path = absPath + '\\data\\page\\'
+    loc_now_path = absPath + '\\data\\loc_now\\'
+    DefNowPng.del_files(page_path)
+    DefNowPng.del_files(loc_now_path)
+    log.info('删除page_path图片,删除loc_now_path图片')
+
     node = phoneGetConfigInfo.ReadConfig().readAppiumData()['config']
     try:
-        sleep(5)
+        sleep(3)
         '''stopAppiumServer'''
         AppiumServer.appiumServerNew().stopServer()
     finally:
         '''startAppiumServer'''
-        sleep(5)
+        sleep(3)
         AppiumServer.appiumServerNew().startServer(node)
         sleep(20)
 
@@ -79,6 +79,6 @@ if __name__ == '__main__':
     reportHtml()
     sendEmail()
 
-    sleep(5)
+    sleep(3)
     '''stopAppiumServer'''
     AppiumServer.appiumServerNew().stopServer()

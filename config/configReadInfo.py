@@ -7,7 +7,7 @@ class ReadConfig(object):
         self.config = configparser.ConfigParser()
         self.config.read(self.configPath)
         self.configLogDict = {'LogLevel':''}
-        self.configDeviceDict = {}
+        self.configDeviceDict = {'port':'','platformName':''}
 
     def readConfigInfo(self):
         self.configLogDict['LogLevel'] = self.config.get('LogLevel','logLevel')
