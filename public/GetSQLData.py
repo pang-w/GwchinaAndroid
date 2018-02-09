@@ -1,10 +1,12 @@
 #encoding=utf-8
 import pymysql
 from public import Log
+from time import sleep
 
 log = Log.Logger(logger='SQLDataInfo').getLog()
 
 def get_area_list():
+    sleep(3)
     try:
         #charset='utf8' 解决中文乱码问题
         #创建连接
@@ -24,6 +26,7 @@ def get_area_list():
         print('连接SQL失败')
 
 def get_user_set_update(value):
+    sleep(3)
     try:
         #charset='utf8' 解决中文乱码问题
         #创建连接
@@ -55,6 +58,7 @@ def get_user_set_update(value):
         print('连接SQL失败')
 
 def sql_url_limit_id():
+    sleep(3)
     try:
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
@@ -73,6 +77,7 @@ def sql_url_limit_id():
         print('连接SQL失败')
 
 def sql_url_black_white(type):
+    sleep(3)
     try:
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
@@ -80,25 +85,21 @@ def sql_url_black_white(type):
         if type == 0:
             cursor.execute("select url_domain from com_rule_url where bind_id = 1097127 AND type_flag = 0 AND active = 1")
             black_list = cursor.fetchall()
-            cursor.close()
-            conn.close()
             log.info('从SQL获取网址黑名单网址list为  %s ' % black_list)
-            # for black in range(len(black_list)):
-            #     return black
             return black_list
         elif type == 1:
             cursor.execute("select url_domain from com_rule_url where bind_id = 1097127 AND type_flag = 1 AND active = 1")
             white_list = cursor.fetchall()
-            cursor.close()
-            conn.close()
             log.info('从SQL获取网址白名单网址list为  %s ' % white_list)
             return white_list
+        cursor.close()
+        conn.close()
 
-    except:
-        log.info('从SQL获取网址黑、白名单网址失败')
-        print('None')
+    except Exception as e:
+        log.info('SQL info %s ' % e )
 
 def sql_url_key():
+    sleep(3)
     try:
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
@@ -118,11 +119,11 @@ def sql_url_key():
         print('连接SQL失败')
 
 def sql_switch_key():
-    '''获取切换网址管理 - 关键字 - 系统关键字的开关值  offline_keyword_shielding  0 - 关  1 - 开'''
-    '''
+    '''获取切换网址管理 - 关键字 - 系统关键字的开关值  offline_keyword_shielding  0 - 关  1 - 开
     "select `value` from com_param_device where bind_id = 1097127 and `name` = 'offline_keyword_shielding'"
     value、name 作为sql 关键字，查询时需加上 ` ` （1左边的符号）,查看字符类型值需加上 ' '
     '''
+    sleep(3)
     try:
         conn = pymysql.connect('172.168.50.26','csall','111111','lssw',charset='utf8')
         cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
@@ -140,6 +141,7 @@ def sql_switch_key():
 
 def sql_locked():
     '''获取锁屏状态的值'''
+    sleep(3)
     try:
         #charset='utf8' 解决中文乱码问题
         #创建连接
@@ -160,7 +162,7 @@ def sql_locked():
         print('连接SQL失败')
 
 if __name__  == '__main__':
-    x = sql_locked()
+    x = sql_url_black_white(0)
     print(x)
     print(type(x))
 

@@ -12,6 +12,10 @@ from testDAL import AppiumServer
 from config import phoneGetConfigInfo
 from public import HTMLTestRunner,DefNowPng,Log
 
+now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
+day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+
+
 log = Log.Logger(logger='runAllTest').getLog()
 absPath = os.path.dirname(os.path.abspath('.'))
 casePath = absPath + '\\test_case'
@@ -34,9 +38,6 @@ def Creatsuite():
 
 def reportHtml():
     test_case = Creatsuite()
-    now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
-    day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-
     tdResult = report + day
     if os.path.exists(tdResult):
         filename = tdResult + "\\" + now + "_result.html"

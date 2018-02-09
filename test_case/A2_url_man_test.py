@@ -139,7 +139,7 @@ class URL_Management(unittest.TestCase):
     def test_url_B001_black(self):
         '''验证黑名单默认页面，如何截取固定坐标的图片做对比，小格雷logo空空大'''
         self.Page.go_black_list()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
         self.png.CreateCustomSizeNowPNG('test_url_B001_black',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_url_B001_black'),self.base.getLocNow('test_url_B001_black'))
 
@@ -283,7 +283,7 @@ class URL_Management(unittest.TestCase):
             self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/tv_url').text, "ithome.com")
         self.Page.click_delete_btn()
         self.Page.click_popup_positive_btn()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
 
     @ScreenAssert.decorator
     def test_url_B014_black(self):
@@ -338,7 +338,7 @@ class URL_Management(unittest.TestCase):
         self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/btn_action').text,"完成")
         self.Page.click_delete_btn()
         self.Page.click_popup_positive_btn()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
 
     @ScreenAssert.decorator
     def test_url_B018_black(self):
@@ -358,8 +358,9 @@ class URL_Management(unittest.TestCase):
         self.Page.add_black_url('www.baidu.com')
         self.Page.input_nick_value('www.qq.com')
         self.Page.input_nick_value('http://www.sohu.com/')
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
         try:
+            print(self.sql.sql_url_black_white(0))
             self.assertEqual(self.sql.sql_url_black_white(0),[{'url_domain': 'baidu.com'}, {'url_domain': 'qq.com'}, {'url_domain': 'sohu.com'}])
         finally:
             self.Page.del_url()
@@ -371,7 +372,7 @@ class URL_Management(unittest.TestCase):
     def test_url_C001_white(self):
         '''验证白名单默认页面，如何截取固定坐标的图片做对比，小格雷logo空空大'''
         self.Page.go_white_list()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
         self.png.CreateCustomSizeNowPNG('test_url_C001_white',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_url_C001_white'),self.base.getLocNow('test_url_C001_white'))
 
@@ -517,7 +518,7 @@ class URL_Management(unittest.TestCase):
             self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/tv_url').text, "taobao.com")
         self.Page.click_delete_btn()
         self.Page.click_popup_positive_btn()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
 
     @ScreenAssert.decorator
     def test_url_C014_white(self):
@@ -569,7 +570,7 @@ class URL_Management(unittest.TestCase):
         self.assertEqual(self.base.get_assert('id', 'com.gwchina.lssw.parent:id/btn_action').text,"完成")
         self.Page.click_delete_btn()
         self.Page.click_popup_positive_btn()
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
 
     @ScreenAssert.decorator
     def test_url_C018_white(self):
@@ -589,7 +590,7 @@ class URL_Management(unittest.TestCase):
         self.Page.add_white_url('www.taobao.com')
         self.Page.input_nick_value('www.51.com')
         self.Page.input_nick_value('www.51job.com')
-        self.base.is_display('id',self.Page.save_btn_loc[1])
+        self.base.is_display(self.Page.save_btn_loc[1])
         try:
             self.assertEqual(self.sql.sql_url_black_white(1),[{'url_domain': '51.com'}, {'url_domain': '51job.com'}, {'url_domain': 'taobao.com'}])
         finally:
@@ -619,7 +620,7 @@ class URL_Management(unittest.TestCase):
     def test_url_E001_key(self):
         '''验证网址管理-关键字默认页面显示，截图对比'''
         self.Page.go_key()
-        self.base.is_display('id',self.Page.add_key_btn[1])
+        self.base.is_display(self.Page.add_key_btn[1])
         self.png.CreateCustomSizeNowPNG('test_url_E001_key',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_url_E001_key'),self.base.getLocNow('test_url_E001_key'))
 
@@ -628,7 +629,7 @@ class URL_Management(unittest.TestCase):
         '''验证网址管理-系统关键字温馨提示，截图对比'''
         self.Page.go_key()
         self.Page.click_key_switch()
-        self.base.is_display('id',self.Page.popup_negative_loc[1])
+        self.base.is_display(self.Page.popup_negative_loc[1])
         self.png.CreateCustomSizeNowPNG('test_url_E002_key',81,703,999,1148)
         self.assertEqual(self.base.gerLocOld('test_url_E002_key'),self.base.getLocNow('test_url_E002_key'))
 
@@ -639,7 +640,7 @@ class URL_Management(unittest.TestCase):
         self.Page.click_key_switch()
         sleep(1)
         self.Page.click_popup_negative_btn()
-        self.base.is_display('id',self.Page.key_switch_btn[1])
+        self.base.is_display(self.Page.key_switch_btn[1])
         self.png.CreateCustomSizeNowPNG('test_url_E003_key',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_url_E003_key'),self.base.getLocNow('test_url_E003_key'))
 
@@ -650,7 +651,7 @@ class URL_Management(unittest.TestCase):
         self.Page.click_key_switch()
         sleep(1)
         self.Page.click_popup_positive_btn()
-        self.base.is_display('id',self.Page.key_switch_btn[1])
+        self.base.is_display(self.Page.key_switch_btn[1])
         self.png.CreateCustomSizeNowPNG('test_url_E004_key',0,396,1080,628)
         self.assertEqual(self.base.gerLocOld('test_url_E004_key'),self.base.getLocNow('test_url_E004_key'))
 
@@ -662,7 +663,7 @@ class URL_Management(unittest.TestCase):
             self.assertEqual(self.sql.sql_switch_key(),{'value': '0'})
         finally:
             self.Page.click_key_switch()
-            self.base.is_display('id', self.Page.key_switch_btn[1])
+            self.base.is_display( self.Page.key_switch_btn[1])
             self.assertEqual(self.sql.sql_switch_key(),{'value': '1'})
 
     @ScreenAssert.decorator
@@ -686,7 +687,7 @@ class URL_Management(unittest.TestCase):
             self.assertEqual(self.base.get_assert('id',self.Page.popup_nick_loc[1]).text,'请输入关键字，例如：游戏')
         finally:
             self.Page.click_popup_negative_btn()
-            self.base.is_display('id', self.Page.key_switch_btn[1])
+            self.base.is_display( self.Page.key_switch_btn[1])
             self.png.CreateCustomSizeNowPNG('test_url_E007_key', 0, 72, 1080, 1776)
             self.assertEqual(self.base.gerLocOld('test_url_E007_key'), self.base.getLocNow('test_url_E007_key'))
 
@@ -760,7 +761,7 @@ class URL_Management(unittest.TestCase):
             self.Page.input_nick_value('测试数据4')
             self.Page.input_nick_value('测试数据5')
             self.Page.input_nick_value('测试数据6')
-            self.base.is_display('id', self.Page.key_switch_btn[1])
+            self.base.is_display( self.Page.key_switch_btn[1])
             self.assertEqual(self.sql.sql_url_key(),[{'keyword': '测试数据4'}, {'keyword': '测试数据5'}, {'keyword': '测试数据6'}])
         finally:
             self.Page.del_url()

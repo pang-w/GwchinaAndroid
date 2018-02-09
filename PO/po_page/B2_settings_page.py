@@ -16,7 +16,7 @@ class SettingPage(Common.Action):
     never_remind_btn = B2_settings_btn.config['never_remind_btn']
 
     def click_setting(self):
-        sleep(5)
+        sleep(8)
         self.find_element(*self.setting_loc).click()
     def click_back(self):
         self.find_element(*self.back_btn).click()

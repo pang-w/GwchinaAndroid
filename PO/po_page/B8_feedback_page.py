@@ -16,7 +16,7 @@ class config(Common.Action):
     feedback_dail_loc = B8_feedback_btn.config['feedback_dail_loc']
 
     def click_setting(self):
-        sleep(5)
+        sleep(8)
         self.find_element(*self.setting_loc).click()
 
     def click_feedback(self):
@@ -47,7 +47,7 @@ class config(Common.Action):
         self.click_setting()
         self.swipe_to_down(1.2, 10)
         self.click_feedback()
-        self.is_display_loc(self.submit_loc)
+        self.is_display(self.submit_loc[1])
 
     def input_msg(self,feedback,contact):
         sleep(1)

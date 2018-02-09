@@ -109,7 +109,8 @@ class AreaPage(Common.Action):
     homepage_child_head_btn = (By.ID, 'com.gwchina.lssw.parent:id/tv_child_nick')#主页上孩子头像按钮（如果存在=刷新出设备）
 
     def go_area_homepage(self):
-        self.is_display_loc(self.homepage_child_head_btn)
+        sleep(8)
+        self.is_display(self.homepage_child_head_btn[1])
         self.click_area()
         # loc = self.is_display_loc(self.add_area_btn)
         # time = 1

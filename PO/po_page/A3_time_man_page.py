@@ -18,7 +18,7 @@ class time_page(Common.Action):
     back_btn = (By.ID,'com.gwchina.lssw.parent:id/iv_back')
 
     def click_time_btn(self):
-        self.is_display_loc(self.homepage_child_head_btn)
+        self.is_display(self.homepage_child_head_btn[1])
         self.find_element(*self.time_btn_loc).click()
     def click_Guide_confirm(self):
         self.find_element(*self.Guide_confirm_page_btn).click()
@@ -30,7 +30,7 @@ class time_page(Common.Action):
         self.find_element(*self.save_negative_btn).click()
     def click_save_positive(self):
         self.find_element(*self.save_positive_btn).click()
-        self.is_display_loc(self.save_btn)
+        self.is_display(self.save_btn[1])
     def click_back(self):
         self.find_element(*self.back_btn).click()
 
@@ -60,9 +60,10 @@ class time_page(Common.Action):
     homepage_child_head_btn = (By.ID, 'com.gwchina.lssw.parent:id/tv_child_nick')#主页上孩子头像按钮（如果存在=刷新出设备）
 
     def go_time_homepage(self):
-        self.is_display_loc(self.homepage_child_head_btn)
+        sleep(8)
+        self.is_display(self.homepage_child_head_btn[1])
         self.click_time_btn()
-        self.is_display('id','com.gwchina.lssw.parent:id/tv_time')
+        self.is_display('com.gwchina.lssw.parent:id/tv_time')
         # loc = self.is_display_loc(self.save_btn)
         # time = 1
         # while loc == False and time <= 5:

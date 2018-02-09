@@ -27,7 +27,7 @@ class Account_Security(unittest.TestCase):
         '''账号与安全页面默认值'''
         self.Page.click_setting()
         self.Page.click_account()
-        self.base.is_display_loc(self.Page.all_back_loc)
+        self.base.is_display(self.Page.all_back_loc[1])
         self.png.CreateCustomSizeNowPNG('test_account_002',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_account_002'),self.base.getLocNow('test_account_002'))
 
@@ -48,20 +48,20 @@ class Account_Security(unittest.TestCase):
         try:
             self.Page.input_phone('')
             self.Page.click_phone_positive()
-            self.base.is_display('id',self.Page.pwd_error_text[1])
+            self.base.is_display(self.Page.pwd_error_text[1])
             self.png.CreateCustomSizeNowPNG('test_account_004',81,748,999,1103)
             self.assertEqual(self.base.gerLocOld('test_account_004'),self.base.getLocNow('test_account_004'))
 
         finally:
             try:
                 self.Page.check_phone_pwd('error')
-                self.base.is_display('id', self.Page.pwd_error_text[1])
+                self.base.is_display(self.Page.pwd_error_text[1])
                 self.png.CreateCustomSizeNowPNG('test_account_004_2', 81, 748, 999, 1103)
                 self.assertEqual(self.base.gerLocOld('test_account_004'), self.base.getLocNow('test_account_004_2'))
             finally:
                 try:
                     self.Page.check_phone_pwd('!@#$%^&')
-                    self.base.is_display('id', self.Page.pwd_error_text[1])
+                    self.base.is_display(self.Page.pwd_error_text[1])
                     self.png.CreateCustomSizeNowPNG('test_account_004_3', 81, 748, 999, 1103)
                     self.assertEqual(self.base.gerLocOld('test_account_004'),
                                      self.base.getLocNow('test_account_004_3'))
@@ -83,19 +83,19 @@ class Account_Security(unittest.TestCase):
         try:
             self.Page.input_pattern('')
             self.Page.click_pattern_positive()
-            self.base.is_display('id',self.Page.pwd_error_text[1])
+            self.base.is_display(self.Page.pwd_error_text[1])
             self.png.CreateCustomSizeNowPNG('test_account_006_1',81,748,999,1103)
             self.assertEqual(self.base.gerLocOld('test_account_006'),self.base.getLocNow('test_account_006_1'))
         finally:
             try:
                 self.Page.check_pattern_pwd('error')
-                self.base.is_display('id', self.Page.pwd_error_text[1])
+                self.base.is_display(self.Page.pwd_error_text[1])
                 self.png.CreateCustomSizeNowPNG('test_account_006_2', 81, 748, 999, 1103)
                 self.assertEqual(self.base.gerLocOld('test_account_006'), self.base.getLocNow('test_account_006_2'))
             finally:
                 try:
                     self.Page.check_pattern_pwd('!@#$%^&')
-                    self.base.is_display('id', self.Page.pwd_error_text[1])
+                    self.base.is_display(self.Page.pwd_error_text[1])
                     self.png.CreateCustomSizeNowPNG('test_account_006_3', 81, 748, 999, 1103)
                     self.assertEqual(self.base.gerLocOld('test_account_006'),
                                      self.base.getLocNow('test_account_006_3'))
@@ -147,9 +147,9 @@ class Account_Security(unittest.TestCase):
         self.assertIsNotNone(self.base.find_toast('登录成功', self.driver))
         self.Page.go_change_pwd()
         self.Page.check_change_pwd('aa222222', 'aa111111', 'aa111111')
-        self.base.is_display('id','com.gwchina.lssw.parent:id/ed_username')
+        self.base.is_display('com.gwchina.lssw.parent:id/ed_username')
         Z1_Login_page.LoginPage(self.driver).login_page('18521524172', 'aa111111')
-        self.base.is_display('xpath','//android.widget.TextView[@text="网址管理"]')
+        self.base.is_display('//android.widget.TextView[@text="网址管理"]','xpath')
 
     @ScreenAssert.decorator
     def test_account_099(self):

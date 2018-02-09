@@ -87,7 +87,8 @@ class url_page(Common.Action):
         self.click_popup_positive_btn()
 
     def go_url_homepage(self):
-        self.is_display_loc(self.homepage_child_head_btn)
+        sleep(8)
+        self.is_display(self.homepage_child_head_btn[1])
         self.click_url_btn()
         # loc = self.is_display_loc(self.rank_btn_loc)
         # time = 1
@@ -129,7 +130,7 @@ class url_page(Common.Action):
         self.click_all_cb()
         self.click_delete_btn()
         self.click_popup_positive_btn()
-        self.is_display('id',self.save_btn_loc[1])
+        self.is_display(self.save_btn_loc[1])
 
     #关键字
     key_btn = (By.XPATH,'//android.widget.TextView[@text="关键字"]')

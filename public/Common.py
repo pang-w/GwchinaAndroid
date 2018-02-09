@@ -14,7 +14,16 @@ class Action():
     def __init__(self,driver):
         self.driver = driver
 
-    def find_element(self,*loc):
+    def find_elementOld(self,*loc):
+        # try:
+        #     WebDriverWait(self.driver, 10, 0.5, ).until(lambda driver: driver.find_element(*loc).is_displayed())
+        #     return self.driver.find_element(*loc)
+        # except:
+        #     SaveCreen.ScreenShot(self.driver).saveScreen()
+        #     log.error(
+        #         "‘find_element(*loc).is_displayed()’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " %
+        #         loc[1])
+
         try:
             WebDriverWait(self.driver, 20, 0.5).until(EC.visibility_of_element_located(loc))
             try:
@@ -27,22 +36,37 @@ class Action():
             SaveCreen.ScreenShot(self.driver).saveScreen()
             log.error("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % loc[1])
 
-    # 一直等待某元素可见
-    def is_display(self,mode,locator):
+    def find_element(self,*loc):
+        sleep(1)
+        try:
+            WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of_element_located(loc))
+        except Exception as e:
+            log.error("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % loc[1])
+            log.error("‘EC.visibility_of_element_located(loc)’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % e)
+        finally:
+            try:
+                WebDriverWait(self.driver,20,0.5,).until(lambda driver: driver.find_element(*loc).is_displayed())
+                return self.driver.find_element(*loc)
+            except Exception as e:
+                SaveCreen.ScreenShot(self.driver).saveScreen()
+                log.error("‘find_element(*loc).is_displayed()’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % e )
+                log.error("‘find_element(*loc).is_displayed()’ The page was not found ‘%s’ element,Save the screen shot as the ‘.\\report\\report_html’ folder " % loc[1])
+        sleep(1)
+
+    # 一直等待某元素可见,默认参数 mode = id
+    def is_display(self,locator,mode='id',):
         try:
             if mode == 'id':
                 WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located((By.ID, locator)))
-                print('is_display已找到 %s 元素' % locator)
                 return True
             elif mode == 'xpath':
                 WebDriverWait(self.driver,20,0.5).until(EC.visibility_of_element_located((By.XPATH, locator)))
-                # print('is_display已找到 %s 元素' % locator)
                 return True
-
-        except:
-            log.error("‘is_display’ Failed to find ‘%s’ elements" % locator)
-            # print('is_display未找到 %s 元素' % locator)
-            return False
+        except Exception as e:
+            log.info("‘is_display’ No find this ‘%s’ elements , Cases Running " % e )
+            log.info("‘is_display’ No find this ‘%s’ elements , Cases Running " % locator)
+            pass
+            # return False
 
     def is_display_loc(self,locator):
         try:
@@ -50,8 +74,7 @@ class Action():
             # print('is_display_loc已找到元素')
             return True
         except:
-            # My_log.info("is_display_loc未能找到 %s 元素" % locator)  加上这个出错
-            log.error("‘is_display_loc’ Failed to find ‘%s’ elements" % locator)
+            log.error("‘is_display_loc’ Failed to find ‘%s’ elements" % locator[1])
             return False
 
     #断言，先查找\定位按钮后在断言，避免断言出错

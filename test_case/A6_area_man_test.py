@@ -36,7 +36,7 @@ class AreaTest(unittest.TestCase):
     def test_area_003(self):
         '''截图对比默认页面'''
         self.page.go_area_homepage()
-        self.base.is_display_loc(self.page.add_area_btn)
+        self.base.is_display(self.page.add_area_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_003',0,72,1080,1776)
         old = self.base.gerLocOld('test_area_003')
         now = self.base.getLocNow('test_area_003')
@@ -177,7 +177,7 @@ class AreaTest(unittest.TestCase):
         self.page.input_area_name('测试')
         sleep(2)
         self.page.click_positive()
-        self.base.is_display('xpath',self.page.home_btn[1])
+        self.base.is_display(self.page.home_btn[1],'xpath')
         self.png.CreateCustomSizeNowPNG('test_area_016',0,240,1080,783)
         old = self.base.gerLocOld('test_area_016')
         now = self.base.getLocNow('test_area_016')
@@ -204,7 +204,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_def()
         self.page.click_negative()
         self.page.click_save_or_edit()
-        self.base.is_display_loc(self.page.home_btn)
+        self.base.is_display(self.page.home_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_019',0,240,1080,783)
         self.assertEqual(self.base.gerLocOld('test_area_019'),self.base.getLocNow('test_area_019'))
 
@@ -217,7 +217,7 @@ class AreaTest(unittest.TestCase):
         self.page.input_area_name('修改测试名称')
         self.page.click_negative()
         self.page.click_back()
-        self.base.is_display_loc(self.page.add_area_btn)
+        self.base.is_display(self.page.add_area_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_020',0,240,1080,783)
         self.assertEqual(self.base.gerLocOld('test_area_020'),self.base.getLocNow('test_area_020'))
 
@@ -229,7 +229,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_save_or_edit()
         self.page.input_area_name('修改测试名称')
         self.page.click_positive()
-        self.base.is_display_loc(self.page.add_area_btn)
+        self.base.is_display(self.page.add_area_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_021',0,240,1080,783)
         self.assertEqual(self.base.gerLocOld('test_area_021'),self.base.getLocNow('test_area_021'))
 
@@ -240,7 +240,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_save_or_edit()
         self.page.click_def()
         self.page.click_positive()
-        self.base.is_display_loc(self.page.home_btn)
+        self.base.is_display(self.page.home_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_022',0,240,1080,783)
         self.assertEqual(self.base.gerLocOld('test_area_022'),self.base.getLocNow('test_area_022'))
 
@@ -251,7 +251,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_home()
         self.page.area_point(900,800)
         self.page.click_save_or_edit()
-        self.base.is_display_loc(self.page.home_btn)
+        self.base.is_display(self.page.home_btn[1])
         self.assertEqual(self.api.get_area(),self.page.address_text())
 
     @ScreenAssert.decorator
@@ -262,7 +262,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_home()
         self.page.area_point(150, 600)
         self.page.click_save_or_edit()
-        self.base.is_display_loc(self.page.home_btn)
+        self.base.is_display(self.page.home_btn[1])
         self.assertNotEqual(test_area_C5_text,self.page.address_text())
 
     @ScreenAssert.decorator
@@ -277,7 +277,7 @@ class AreaTest(unittest.TestCase):
         '''以家为例,验证设置时间页面默认显示，截图对比'''
         self.page.go_rb_time_page()
         self.page.click_rb_start_end_time()
-        self.base.is_display_loc(self.page.rb_everyday_btn)
+        self.base.is_display(self.page.rb_everyday_btn[1])
         self.png.CreateCustomSizeNowPNG('test_area_026',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_area_026'),self.base.getLocNow('test_area_026'))
 
@@ -299,7 +299,7 @@ class AreaTest(unittest.TestCase):
         self.page.go_rb_time_page()
         self.page.click_rb_start_end_time()
         self.page.click_rb_time_range()
-        self.base.is_display_loc(self.page.rb_finish_btn)
+        self.base.is_display(self.page.rb_finish_btn[1])
         self.base.swipe_screen(176,1265,176,1018,1000)
         self.base.swipe_screen(419,1265,419,1018,1000)
         self.base.swipe_screen(673,1265,673,1018,1000)
@@ -314,7 +314,7 @@ class AreaTest(unittest.TestCase):
         self.page.go_rb_time_page()
         self.page.click_rb_start_end_time()
         self.page.click_rb_time_range()
-        self.base.is_display_loc(self.page.rb_finish_btn)
+        self.base.is_display(self.page.rb_finish_btn[1])
         self.base.swipe_screen(176,1265,176,1018,1000)
         self.base.swipe_screen(419,1265,419,1018,1000)
         self.base.swipe_screen(673,1265,673,1508,1000)
@@ -325,7 +325,7 @@ class AreaTest(unittest.TestCase):
         finally:
             self.page.click_save_or_edit()
             self.page.click_save_or_edit()
-            self.base.is_display_loc(self.page.home_btn)
+            self.base.is_display(self.page.home_btn[1])
 
     @ScreenAssert.decorator
     def test_area_030(self):
@@ -359,7 +359,7 @@ class AreaTest(unittest.TestCase):
         finally:
             self.page.click_save_or_edit()
             self.page.click_save_or_edit()
-            self.base.is_display_loc(self.page.home_btn)
+            self.base.is_display(self.page.home_btn[1])
 
     @ScreenAssert.decorator
     def test_area_034(self):
@@ -379,7 +379,7 @@ class AreaTest(unittest.TestCase):
         finally:
             self.page.click_save_or_edit()
             self.page.click_save_or_edit()
-            self.base.is_display_loc(self.page.home_btn)
+            self.base.is_display(self.page.home_btn[1])
 
     @ScreenAssert.decorator
     def test_area_036(self):
@@ -454,7 +454,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_save_or_edit()
         self.page.click_def()
         self.page.click_positive()
-        self.base.is_display('xpath',self.page.home_btn[1])
+        self.base.is_display(self.page.home_btn[1],'xpath')
         self.png.CreateCustomSizeNowPNG('test_area_041',0,72,1080,413)
         self.assertEqual(self.base.gerLocOld('test_area_041'),self.base.getLocNow('test_area_041'))
 
@@ -465,7 +465,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_save_or_edit()
         self.page.click_def()
         self.page.click_positive()
-        self.base.is_display('xpath',self.page.school_btn[1])
+        self.base.is_display(self.page.school_btn[1],'xpath')
         self.png.CreateCustomSizeNowPNG('test_area_042',0,72,1080,616)
         self.assertEqual(self.base.gerLocOld('test_area_042'),self.base.getLocNow('test_area_042'))
 
@@ -481,7 +481,7 @@ class AreaTest(unittest.TestCase):
         self.page.click_def()
         self.page.click_positive()
         self.page.click_save_or_edit()
-        self.base.is_display('xpath',self.page.school_btn[1])
+        self.base.is_display(self.page.school_btn[1],'xpath')
         self.png.CreateCustomSizeNowPNG('test_area_043',0,72,1080,1776)
         self.assertEqual(self.base.gerLocOld('test_area_043'),self.base.getLocNow('test_area_043'))
 

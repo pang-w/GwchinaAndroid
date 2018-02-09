@@ -29,7 +29,7 @@ class About_us(Common.Action):
     back_btn = B9_about_us_btn.config['back_btn']
 
     def click_setting(self):
-        sleep(5)
+        sleep(8)
         self.find_element(*self.setting_loc).click()
     def click_about_us(self):
         self.find_element(*self.about_us_loc).click()
@@ -38,7 +38,7 @@ class About_us(Common.Action):
     def click_default_version(self):
         self.find_element(*self.default_version_loc).click()
     def click_check_version(self):
-        self.is_display_loc(self.check_version_loc)
+        self.is_display(self.check_version_loc[1])
         self.find_element(*self.check_version_loc).click()
     def click_version(self):
         self.find_element(*self.version_loc).click()
@@ -80,6 +80,6 @@ class About_us(Common.Action):
         self.click_setting()
         self.swipe_to_down(1.2, 10)
         self.click_about_us()
-        self.is_display_loc(self.version_loc)
+        self.is_display(self.version_loc[1])
 
 

@@ -21,7 +21,7 @@ class TimeTest(unittest.TestCase):
     def test_time_A001(self):
         '''首次进入时间管理验证引导页显示'''
         self.page.click_time_btn()
-        self.base.is_display_loc(self.page.Guide_confirm_page_btn)
+        self.base.is_display(self.page.Guide_confirm_page_btn[1])
         self.png.CreateCustomSizeNowPNG('test_time_001',0,490,1080,1350)
         self.assertEqual(self.base.gerLocOld('test_time_001'),self.base.getLocNow('test_time_001'))
 
@@ -36,7 +36,7 @@ class TimeTest(unittest.TestCase):
         self.page.click_back()
         self.page.click_save()
         self.page.click_save_positive()
-        self.base.is_display('id',self.page.save_btn[1])
+        self.base.is_display(self.page.save_btn[1])
 
     @ScreenAssert.decorator
     def test_time_A003(self):
@@ -51,14 +51,14 @@ class TimeTest(unittest.TestCase):
         '''进入时间管理验证返回功能'''
         self.page.go_time_homepage()
         self.page.click_back()
-        self.base.is_display_loc(self.page.time_btn_loc)
+        self.base.is_display(self.page.time_btn_loc[1])
         self.assertIsNotNone(self.base.get_assert('xpath','//android.widget.TextView[@text="软件管理"]'))
 
     @ScreenAssert.decorator
     def test_time_A005(self):
         '''进入时间管理验证是否进入当天周期'''
         self.page.go_time_homepage()
-        self.base.is_display_loc(self.page.back_btn)
+        self.base.is_display(self.page.back_btn[1])
         get_text = self.driver.find_element_by_id('com.gwchina.lssw.parent:id/title').text
         get_weekday = self.page.get_weekday()
         self.assertEqual(get_text,get_weekday)
@@ -128,7 +128,7 @@ class TimeTest(unittest.TestCase):
         self.base.swipe_screen(200,600,1040,600,500)
         self.page.click_save()
         self.page.click_save_positive()
-        self.base.is_display_loc(self.page.time_1_btn)
+        self.base.is_display(self.page.time_1_btn[1])
         self.assertEqual(self.base.get_assert('id','com.gwchina.lssw.parent:id/tv_time').text,'06:00-24:00')
 
     # def test_time_A8(self):

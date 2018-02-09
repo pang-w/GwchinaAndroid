@@ -23,7 +23,7 @@ class LoginTest(unittest.TestCase):
         '''截图对比登录页面LOGO以及字样'''
         self.Page.click_video()
         self.Page.click_start()
-        self.base.is_display_loc(self.Page.username_loc)
+        self.base.is_display(self.Page.username_loc[1])
         self.createpng.CreateCustomSizeNowPNG('test_login_001',0,72,1080,700)
         old = self.base.gerLocOld('test_login_001')
         now = self.base.getLocNow('test_login_001')
@@ -34,7 +34,7 @@ class LoginTest(unittest.TestCase):
         '''截图对比登录页面'''
         self.Page.click_video()
         self.Page.click_start()
-        self.base.is_display_loc(self.Page.username_loc)
+        self.base.is_display(self.Page.username_loc[1])
         self.createpng.CreateCustomSizeNowPNG('test_login_002',0,840,1080,1776)
         old = self.base.gerLocOld('test_login_002')
         now = self.base.getLocNow('test_login_002')

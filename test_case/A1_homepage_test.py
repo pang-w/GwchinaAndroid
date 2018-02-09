@@ -14,7 +14,7 @@ class HomePageTest(unittest.TestCase):
     @ScreenAssert.decorator
     def test_home_A001(self):
         '''主页面截图对比顶部头像以及默认锁屏状态，截图对比'''
-        self.base.is_display('id',self.page.device_btn[1])
+        self.base.is_display(self.page.device_btn[1])
         self.png.CreateCustomSizeNowPNG('test_home_A001',0,75,1078,1156)
         self.assertEqual(self.base.gerLocOld('test_home_A001'),self.base.getLocNow('test_home_A001'))
 
@@ -23,7 +23,7 @@ class HomePageTest(unittest.TestCase):
         '''主页面点击头像跳转设备详情页面，返回到主页面'''
         self.page.click_header()
         try:
-            self.base.is_display('id',self.page.title_text[1])
+            self.base.is_display(self.page.title_text[1])
             self.assertEqual(self.page.get_title(),'设备详情')
         finally:
             self.page.click_all_back()
@@ -62,11 +62,11 @@ class HomePageTest(unittest.TestCase):
         '''点击锁屏、解屏按钮，sql对比'''
         try:
             self.page.click_lock_btn()
-            self.base.is_display('id',self.page.device_btn[1])
+            self.base.is_display(self.page.device_btn[1])
             self.assertEqual(GetSQLData.sql_locked(), 1)
         finally:
             self.page.click_lock_btn()
-            self.base.is_display('id',self.page.device_btn[1])
+            self.base.is_display(self.page.device_btn[1])
             self.assertEqual(GetSQLData.sql_locked(), 0)
 
     @ScreenAssert.decorator
@@ -74,11 +74,11 @@ class HomePageTest(unittest.TestCase):
         '''点击锁屏后，text验证设备已锁屏文本'''
         try:
             self.page.click_lock_btn()
-            self.base.is_display('id',self.page.device_btn[1])
+            self.base.is_display(self.page.device_btn[1])
             self.assertEqual(self.page.get_lock_stute_text(),'设备已锁屏')
         finally:
             self.page.click_lock_btn()
-            self.base.is_display('id',self.page.device_btn[1])
+            self.base.is_display(self.page.device_btn[1])
             self.assertEqual(self.page.get_lock_stute_text(),'设备未锁屏')
 
     @ScreenAssert.decorator

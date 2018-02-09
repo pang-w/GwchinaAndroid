@@ -30,7 +30,7 @@ class AccountPage(Common.Action):
 
 
     def click_setting(self):
-        sleep(5)
+        sleep(8)
         self.find_element(*self.setting_loc).click()
 
     def click_account(self):

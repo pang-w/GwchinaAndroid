@@ -30,7 +30,7 @@ class child_device(Common.Action):
     null_device_loc = B3_childdevice_btn.config['null_device_loc']
 
     def click_setting(self):
-        sleep(5)
+        sleep(8)
         self.find_element(*self.setting_loc).click()
 
     def click_device(self):
@@ -96,7 +96,7 @@ class child_device(Common.Action):
     def go_child_device(self):
         self.click_setting()
         self.click_device()
-        self.is_display_loc(self.device_title_loc)
+        self.is_display(self.null_device_loc[1])
 
 
     def swipe_to_child_down(self,start_x,start_y,end_x,end_y):  #分辨率适用于天机MINI（锁定菜单栏）
