@@ -9,7 +9,7 @@ from testDAL import phoneBase
 from testDAL import apkBaseInfo
 from config import configReadInfo
 
-now = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
+now = time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time()))
 apkPath = os.path.dirname(os.path.abspath('.')) + '\\ApkData\\GreenBox_Parent_v6.0.0_Nightly_Cs_1801290007.apk'
 absPath = os.path.dirname(os.path.abspath('.'))
 appiumLogName = absPath + '\\log\\%s_appium.log' % now

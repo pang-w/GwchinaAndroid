@@ -15,23 +15,25 @@ def getPhoneInfo(devices):
     model = "ro.product.model=" #型号
     brand = "ro.product.brand=" # 品牌
     device = "ro.product.device=" # 设备名
-
-    for line in phone_info:
-        for i in line.split():
-            temp = i.decode()
-            if temp.find(release) >= 0:
-                phone_list["release"] = temp[len(release):]
-                break
-            if temp.find(model) >= 0 :
-                phone_list["model"] = temp[len(model):]
-                break
-            if temp.find(brand) >= 0 :
-                phone_list["brand"] = temp[len(brand):]
-                break
-            if temp.find(device) >= 0 :
-                phone_list["device"] = temp[len(device):]
-                break
-    return phone_list
+    try:
+        for line in phone_info:
+            for i in line.split():
+                temp = i.decode()
+                if temp.find(release) >= 0:
+                    phone_list["release"] = temp[len(release):]
+                    break
+                if temp.find(model) >= 0 :
+                    phone_list["model"] = temp[len(model):]
+                    break
+                if temp.find(brand) >= 0 :
+                    phone_list["brand"] = temp[len(brand):]
+                    break
+                if temp.find(device) >= 0 :
+                    phone_list["device"] = temp[len(device):]
+                    break
+        return phone_list
+    except:
+        print('1')
 
 #获得手机运行最大内存
 #os.popen() 方法用于从一个命令打开一个管道。

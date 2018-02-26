@@ -1,0 +1,1 @@
+2018-02-26 15:47:39,549 - Appium - CRITICAL - desired_caps : ({'uuid': '74ccdc4b', 'appActivity': "'com.gwchina.tylw.parent.StartEntryActivity'", 'deviceName': '74ccdc4b', 'appPackage': "'com.gwchina.lssw.parent'", 'remote': 'http://localhost:4723/wd/hub', 'platformVersion': '5.1.1', 'automationName': 'Uiautomator2', 'platformName': 'android'}) 

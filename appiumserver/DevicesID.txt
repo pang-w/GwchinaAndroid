@@ -1,8 +1,0 @@
-'''
-appium -a 127.0.0.1 -p 4723 -U 83d7d437
-appium -a 127.0.0.1 -p 4723 -U 74ccdc4b     ----- Ìì»ú 05
-appium -a 127.0.0.1 -p 4723 -U dd8af4f9     ----- vivo X7
-appium -a 127.0.0.1 -p 4723 -U TOWKLFOF99999999  ---- OPPO R9
-83d7d437 = devices_name
-appium -a 127.0.0.1 -p 4723 -U fafcb26d
-'''

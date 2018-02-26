@@ -20,13 +20,10 @@ class AndroidDebugBridge(object):
     def attachedDevices(self):
         result = str(self.call_adb("devices"))
         devices = result.partition('\n')[2].replace('\n', '').split('\tdevice')
-        # flag = [device for device in devices if len(device) > 2]
-        # print(flag)
-        # if flag:
-        #     return True
-        # else:
-        #     return False
-        return devices[0]
+        if devices != ['']:
+            return devices[0]
+        else:
+            print('未检测到设备')
 
     # 状态
     def getState(self):
@@ -59,6 +56,7 @@ class AndroidDebugBridge(object):
 
 if __name__ == '__main__':
     print(AndroidDebugBridge().attachedDevices())
+    # AndroidDebugBridge().attachedDevices()
     # print(AndroidDebugBridge().getState())
     # print(AndroidDebugBridge().getAppPid(pkg_name='com.gwchina.lssw.parent'))
     # print(AndroidDebugBridge().openApp(package_name='com.gwchina.lssw.parent',activity='com.gwchina.tylw.parent.StartEntryActivity'))

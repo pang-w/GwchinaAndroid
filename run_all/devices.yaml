@@ -1,9 +1,0 @@
-appium:
- - devices: 74ccdc4b
-   port: 4723
-   config: node C:\Users\Administrator\AppData\Local\Programs\appium-desktop\resources\app\node_modules\appium\build\lib\main.js -p 4723 -bp 4724 -U 74ccdc4b
-   platformName: android
- - devices: 83d7d437
-   port: 4727
-   config: node C:\Users\Administrator\AppData\Local\Programs\appium-desktop\resources\app\node_modules\appium\build\lib\main.js -p 4727 -bp 4728 -U 83d7d437
-   platformName: android
